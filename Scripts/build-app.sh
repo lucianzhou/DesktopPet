@@ -14,8 +14,11 @@ mkdir -p "$CONTENTS/MacOS" "$CONTENTS/Resources/Assets"
 
 cp "$ROOT/.build/release/DesktopPet" "$CONTENTS/MacOS/DesktopPet"
 cp "$ROOT/Support/Info.plist" "$CONTENTS/Info.plist"
-cp "$ROOT/Assets/baomihua-interaction.png" "$CONTENTS/Resources/Assets/"
-cp "$ROOT/Assets/baomihua-standard.png" "$CONTENTS/Resources/Assets/"
+cp "$ROOT/Assets/baomihua-interaction-v5.png" "$CONTENTS/Resources/Assets/"
+cp "$ROOT/Assets/baomihua-sleep.png" "$CONTENTS/Resources/Assets/"
+cp "$ROOT/Assets/baomihua-wake.png" "$CONTENTS/Resources/Assets/"
+cp "$ROOT/Assets/baomihua-neutral.png" "$CONTENTS/Resources/Assets/"
+cp "$ROOT/Assets/baomihua-gaze-v8-uniform.png" "$CONTENTS/Resources/Assets/"
 
 codesign --force --deep --sign - "$APP_DIR"
 echo "$APP_DIR"

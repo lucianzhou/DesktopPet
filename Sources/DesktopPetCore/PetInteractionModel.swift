@@ -10,9 +10,8 @@ public enum PetPosture: String, Equatable, Sendable {
 public enum PetAction: Equatable, Sendable {
     case none
     case playStretch
-    case startStandTimer
+    case playInteraction
     case startSleepTimer
-    case cancelStandTimer
     case cancelAllTimers
 }
 
@@ -37,9 +36,9 @@ public struct PetInteractionModel: Sendable {
         case .sleeping:
             posture = .stretching
             return PetTransition(posture: posture, actions: [.cancelAllTimers, .playStretch])
-        case .sitting, .standing:
+        case .sitting:
             return PetTransition(posture: posture, actions: [.startSleepTimer])
-        case .stretching:
+        case .stretching, .standing:
             return PetTransition(posture: posture, actions: [.none])
         }
     }
@@ -50,7 +49,10 @@ public struct PetInteractionModel: Sendable {
             return PetTransition(posture: posture, actions: [.none])
         }
         posture = .standing
-        return PetTransition(posture: posture, actions: [.startStandTimer, .startSleepTimer])
+        // The controller owns one finite, 48-frame interaction sequence.  Do
+        // not start a second timer here: its completion is the only event
+        // allowed to return the pet to sitting.
+        return PetTransition(posture: posture, actions: [.cancelAllTimers, .playInteraction])
     }
 
     @discardableResult
@@ -63,12 +65,12 @@ public struct PetInteractionModel: Sendable {
     }
 
     @discardableResult
-    public mutating func standTimerFired() -> PetTransition {
+    public mutating func interactionCompleted() -> PetTransition {
         guard posture == .standing else {
             return PetTransition(posture: posture, actions: [.none])
         }
         posture = .sitting
-        return PetTransition(posture: posture, actions: [.none])
+        return PetTransition(posture: posture, actions: [.startSleepTimer])
     }
 
     @discardableResult
@@ -85,5 +87,17 @@ public struct PetInteractionModel: Sendable {
         var degrees = atan2(dx, dy) * 180 / .pi
         if degrees < 0 { degrees += 360 }
         return Int((degrees / 22.5).rounded()) % 16
+    }
+
+    public static func nextGazeDirection(from current: Int, toward target: Int) -> Int {
+        let normalizedCurrent = ((current % 16) + 16) % 16
+        let normalizedTarget = ((target % 16) + 16) % 16
+        guard normalizedCurrent != normalizedTarget else { return normalizedCurrent }
+
+        let clockwise = (normalizedTarget - normalizedCurrent + 16) % 16
+        let counterclockwise = (normalizedCurrent - normalizedTarget + 16) % 16
+        return clockwise <= counterclockwise
+            ? (normalizedCurrent + 1) % 16
+            : (normalizedCurrent + 15) % 16
     }
 }
