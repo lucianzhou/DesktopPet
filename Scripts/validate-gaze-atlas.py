@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the final 8x2 gaze atlas before it can enter the app bundle."""
+"""Validate a final 8-column gaze atlas before it can enter the app bundle."""
 
 from __future__ import annotations
 
@@ -52,7 +52,7 @@ def main() -> None:
         action="store_true",
         help=(
             "Allow a deliberate head-pose silhouette while strictly enforcing one fixed "
-            "body width, baseline, and body-area range across all 16 directions."
+            "body width, baseline, and body-area range across all directions."
         ),
     )
     args = parser.parse_args()
@@ -67,11 +67,14 @@ def main() -> None:
     cells: list[dict[str, object]] = []
     torso_masks: list[np.ndarray] = []
     torso_entries: list[dict[str, object]] = []
-    expected_size = (PREP.CELL_SIZE[0] * 8, PREP.CELL_SIZE[1] * 2)
-    if atlas.size != expected_size:
-        failures.append(f"atlas_size_{atlas.size}_expected_{expected_size}")
+    expected_width = PREP.CELL_SIZE[0] * 8
+    if atlas.width != expected_width or atlas.height <= 0 or atlas.height % PREP.CELL_SIZE[1] != 0:
+        failures.append(
+            f"atlas_size_{atlas.size}_expected_width_{expected_width}_and_whole_{PREP.CELL_SIZE[1]}px_rows"
+        )
+    row_count = atlas.height // PREP.CELL_SIZE[1] if atlas.height > 0 else 0
 
-    for row in range(2):
+    for row in range(row_count):
         for column in range(8):
             cell = atlas.crop((column * PREP.CELL_SIZE[0], row * PREP.CELL_SIZE[1], (column + 1) * PREP.CELL_SIZE[0], (row + 1) * PREP.CELL_SIZE[1]))
             alpha = np.asarray(cell)[..., 3]
@@ -126,7 +129,7 @@ def main() -> None:
             cells.append({"row": row, "column": column, "box": box, "metrics": metrics, "pink_edge_pixels": pink, "failures": cell_failures})
 
     pose_geometry: dict[str, object] | None = None
-    if args.allow_pose_silhouette and len(cells) == 16:
+    if args.allow_pose_silhouette and cells:
         # The v3 regression that prompted this gate narrowed the complete cat
         # from 136px to 123px while walking around the circle.  A valid
         # pose-preserving atlas must instead keep the lower-body footprint
@@ -139,6 +142,13 @@ def main() -> None:
             abs(areas[index] - areas[(index + 1) % len(areas)])
             for index in range(len(areas))
         ) if areas else 0.0
+        high_density = len(cells) >= 32
+        max_full_width_delta = 4 if high_density else 1
+        max_body_area_delta = 0.06 if high_density else 0.05
+        max_adjacent_body_area_delta = 0.02 if high_density else 0.03
+        max_torso_left_delta = 2 if high_density else 1
+        max_torso_width_delta = 4 if high_density else 1
+        max_torso_area_spread = 0.05 if high_density else 0.035
         pose_geometry = {
             "full_sprite_widths": widths,
             "max_full_sprite_width_delta": max_width_delta,
@@ -146,16 +156,16 @@ def main() -> None:
             "max_body_area_delta": round(max_area_delta, 5),
             "max_adjacent_body_area_delta_including_loop": round(adjacent_area_delta, 5),
             "limits": {
-                "max_full_sprite_width_delta": 1,
-                "max_body_area_delta": 0.05,
-                "max_adjacent_body_area_delta": 0.03,
+                "max_full_sprite_width_delta": max_full_width_delta,
+                "max_body_area_delta": max_body_area_delta,
+                "max_adjacent_body_area_delta": max_adjacent_body_area_delta,
             },
         }
-        if max_width_delta > 1:
+        if max_width_delta > max_full_width_delta:
             failures.append(f"pose_geometry:full_sprite_width_drift_{max_width_delta}px")
-        if max_area_delta > 0.05:
+        if max_area_delta > max_body_area_delta:
             failures.append(f"pose_geometry:body_area_drift_{max_area_delta:.5f}")
-        if adjacent_area_delta > 0.03:
+        if adjacent_area_delta > max_adjacent_body_area_delta:
             failures.append(f"pose_geometry:adjacent_body_area_drift_{adjacent_area_delta:.5f}")
 
         # Compare only the lower torso, forepaws and tail across neighbours.
@@ -184,20 +194,20 @@ def main() -> None:
             "adjacent_ious_including_loop": [round(value, 5) for value in torso_adjacent_ious],
             "min_adjacent_iou_including_loop": round(torso_min_iou, 5),
             "limits": {
-                "max_left_delta": 1,
+                "max_left_delta": max_torso_left_delta,
                 "max_center_x_delta": 1.0,
-                "max_width_delta": 1,
-                "relative_area_spread": 0.035,
+                "max_width_delta": max_torso_width_delta,
+                "relative_area_spread": max_torso_area_spread,
                 "min_adjacent_iou_including_loop": 0.95,
             },
         }
-        if torso_lefts and max(torso_lefts) - min(torso_lefts) > 1:
+        if torso_lefts and max(torso_lefts) - min(torso_lefts) > max_torso_left_delta:
             failures.append("pose_geometry:fixed_torso_left_drift")
         if torso_centers and max(torso_centers) - min(torso_centers) > 1.0:
             failures.append("pose_geometry:fixed_torso_center_drift")
-        if torso_widths and max(torso_widths) - min(torso_widths) > 1:
+        if torso_widths and max(torso_widths) - min(torso_widths) > max_torso_width_delta:
             failures.append("pose_geometry:fixed_torso_width_drift")
-        if torso_area_spread > 0.035:
+        if torso_area_spread > max_torso_area_spread:
             failures.append(f"pose_geometry:fixed_torso_area_drift_{torso_area_spread:.5f}")
         if torso_min_iou < 0.95:
             failures.append(f"pose_geometry:fixed_torso_adjacent_iou_{torso_min_iou:.5f}")

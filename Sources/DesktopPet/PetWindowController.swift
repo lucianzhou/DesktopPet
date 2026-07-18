@@ -258,7 +258,7 @@ final class PetWindowController: NSWindowController {
                     < circularDistance(from: lastGazeDirection, to: $1, count: directionCount)
             } ?? 0
             if lastGazeDirection != bridge {
-                guard now - lastGazeStepAt >= 1.0 / 30.0 else { return }
+                guard now - lastGazeStepAt >= 1.0 / 60.0 else { return }
                 let next = PetInteractionModel.nextGazeDirection(
                     from: lastGazeDirection,
                     toward: bridge,
@@ -305,7 +305,7 @@ final class PetWindowController: NSWindowController {
         }
         guard let targetGazeDirection else { return }
 
-        guard now - lastGazeStepAt >= 1.0 / 30.0 else { return }
+        guard now - lastGazeStepAt >= 1.0 / 60.0 else { return }
         let direction = lastGazeDirection.map {
             PetInteractionModel.nextGazeDirection(
                 from: $0,
@@ -409,7 +409,7 @@ private enum AssetLocator {
                 && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-sleep-v3.png").path)
                 && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-wake-v7.png").path)
                 && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-neutral.png").path)
-                && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-gaze-v8-uniform.png").path)
+                && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-gaze-v10-64.png").path)
         }) else {
             throw AssetError.missingAssets(roots.map(\.path))
         }
@@ -417,7 +417,7 @@ private enum AssetLocator {
               let sleep = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-sleep-v3.png")),
               let wake = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-wake-v7.png")),
               let neutral = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-neutral.png")),
-              let gaze = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-gaze-v8-uniform.png")) else {
+              let gaze = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-gaze-v10-64.png")) else {
             throw AssetError.unreadableAssets(assetsRoot.path)
         }
         let interactionSize = pixelSize(of: interaction)

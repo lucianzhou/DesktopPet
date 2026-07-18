@@ -4,7 +4,7 @@ import QuartzCore
 @MainActor
 final class PetView: NSView {
     static let cellSize = CGSize(width: 192, height: 208)
-    // Wake-v7 ends at a 135px-wide canonical sit and gaze-v8 is registered at
+    // Wake-v7 ends at a 135px-wide canonical sit and gaze-v10 is registered at
     // roughly 136px. The neutral and interaction masters are 145px wide, so
     // draw that pair at the same physical scale to prevent a state-boundary
     // size pop. Interaction development remains paused, but retaining the

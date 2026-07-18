@@ -23,10 +23,10 @@ PYTHON="${PYTHON:-/Users/popwind/.cache/codex-runtimes/codex-primary-runtime/dep
   --first-anchor Assets/baomihua-sleep-v3.png \
   --last-anchor Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png \
   --json-out Art/QA/wake-v7-continuity.json
-"$PYTHON" Scripts/validate-gaze-atlas.py Assets/baomihua-gaze-v8-uniform.png \
+"$PYTHON" Scripts/validate-gaze-atlas.py Assets/baomihua-gaze-v10-64.png \
   --allow-pose-silhouette \
   --canonical Art/Approved/baomihua-canonical-front-crouch-cell.png \
-  --json-out Art/QA/gaze-v8-uniform/validation.json
+  --json-out Art/QA/sitting-v10/runtime-validation.json
 
 
 # The shipped interaction is a quality-gated 8×6 / 48-frame sequence.  Its

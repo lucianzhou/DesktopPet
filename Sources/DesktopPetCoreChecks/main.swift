@@ -38,8 +38,20 @@ check(
     "32-direction right gaze"
 )
 check(
+    PetInteractionModel.gazeDirection(
+        pointer: CGPoint(x: 200, y: 100),
+        petCenter: center,
+        directionCount: 64
+    ) == 16,
+    "64-direction right gaze"
+)
+check(
     PetInteractionModel.nextGazeDirection(from: 31, toward: 1, directionCount: 32) == 0,
     "32-direction clockwise wrap step"
+)
+check(
+    PetInteractionModel.nextGazeDirection(from: 63, toward: 1, directionCount: 64) == 0,
+    "64-direction clockwise wrap step"
 )
 check(PetInteractionModel.breathingAmplitude(elapsed: 0, cycle: 4.4) == 0, "breathing starts at rest")
 check(

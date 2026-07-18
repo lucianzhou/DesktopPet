@@ -1,0 +1,1115 @@
+{
+  "schema": "desktop-pet.sitting-v10.whole-cat-scale-regularization.v1",
+  "frame_count": 64,
+  "method": "complete-cat uniform scale and translation only; hard anchors unchanged",
+  "scale_range": [
+    0.9947566743047264,
+    1.022652250565543
+  ],
+  "records": [
+    {
+      "frame": 0,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/00.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 1,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-00-01-registered/01.png",
+      "t": 0.25,
+      "scale": 0.9987967489882266,
+      "source_area": 18104,
+      "target_area": 18060.45889857221,
+      "output_area": 18104,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18104,
+        "alpha_centroid_x": 100.92616786744262,
+        "box": [
+          28,
+          8,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 2,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-00-01-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0008260090312704,
+      "source_area": 17919,
+      "target_area": 17948.61473763366,
+      "output_area": 17919,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17919,
+        "alpha_centroid_x": 100.87133137281113,
+        "box": [
+          28,
+          8,
+          163,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 3,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-00-01-registered/03.png",
+      "t": 0.75,
+      "scale": 0.9947566743047264,
+      "source_area": 18026,
+      "target_area": 17837.463201196308,
+      "output_area": 17876,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17876,
+        "alpha_centroid_x": 100.39131939301727,
+        "box": [
+          28,
+          8,
+          163,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 4,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/01.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 5,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-01-02-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0131412147969123,
+      "source_area": 17265,
+      "target_area": 17721.74766613962,
+      "output_area": 17762,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17762,
+        "alpha_centroid_x": 100.3796677902891,
+        "box": [
+          26,
+          13,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 6,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-01-02-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0085901399024975,
+      "source_area": 17416,
+      "target_area": 17716.496888493522,
+      "output_area": 17753,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17753,
+        "alpha_centroid_x": 100.72636602683573,
+        "box": [
+          27,
+          12,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 7,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-01-02-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0178050988260903,
+      "source_area": 17097,
+      "target_area": 17711.247666600633,
+      "output_area": 17688,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17688,
+        "alpha_centroid_x": 101.32700665242716,
+        "box": [
+          28,
+          12,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 8,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/02.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 9,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-02-03-registered/01.png",
+      "t": 0.25,
+      "scale": 0.9999292828242438,
+      "source_area": 17702,
+      "target_area": 17699.496417635793,
+      "output_area": 17702,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17702,
+        "alpha_centroid_x": 100.77944103205319,
+        "box": [
+          28,
+          6,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 10,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-02-03-registered/02.png",
+      "t": 0.5,
+      "scale": 0.9988150640784379,
+      "source_area": 17735,
+      "target_area": 17692.9952240993,
+      "output_area": 17735,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17735,
+        "alpha_centroid_x": 100.86220505144667,
+        "box": [
+          28,
+          6,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 11,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-02-03-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0003251640652278,
+      "source_area": 17675,
+      "target_area": 17686.496418513056,
+      "output_area": 17675,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17675,
+        "alpha_centroid_x": 100.86939085952811,
+        "box": [
+          28,
+          6,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 12,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/03.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 13,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-03-04-registered/01.png",
+      "t": 0.25,
+      "scale": 1.000905455038119,
+      "source_area": 17658,
+      "target_area": 17689.99152701678,
+      "output_area": 17658,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17658,
+        "alpha_centroid_x": 101.34947692380021,
+        "box": [
+          28,
+          8,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 14,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-03-04-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0023810407924383,
+      "source_area": 17616,
+      "target_area": 17699.988700561364,
+      "output_area": 17616,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17616,
+        "alpha_centroid_x": 100.82109849757221,
+        "box": [
+          28,
+          8,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 15,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-03-04-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0055797149886103,
+      "source_area": 17514,
+      "target_area": 17709.99152382481,
+      "output_area": 17761,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17761,
+        "alpha_centroid_x": 101.32088616209784,
+        "box": [
+          28,
+          7,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 16,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/04.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 17,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-04-05-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0003103044389374,
+      "source_area": 17695,
+      "target_area": 17705.983377925102,
+      "output_area": 17695,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17695,
+        "alpha_centroid_x": 101.76275683834056,
+        "box": [
+          28,
+          5,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 18,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-04-05-registered/02.png",
+      "t": 0.5,
+      "scale": 0.9985048795765227,
+      "source_area": 17745,
+      "target_area": 17691.977843079047,
+      "output_area": 17745,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17745,
+        "alpha_centroid_x": 101.88222023740342,
+        "box": [
+          28,
+          6,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 19,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-04-05-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0001692756992306,
+      "source_area": 17672,
+      "target_area": 17677.983386691732,
+      "output_area": 17672,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17672,
+        "alpha_centroid_x": 102.20900781809945,
+        "box": [
+          28,
+          7,
+          164,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 20,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/05.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 21,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-05-06-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0042920870823957,
+      "source_area": 17560,
+      "target_area": 17711.061588856075,
+      "output_area": 17816,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17816,
+        "alpha_centroid_x": 102.8372005075533,
+        "box": [
+          28,
+          10,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 22,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-05-06-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0079276313162093,
+      "source_area": 17480,
+      "target_area": 17758.24856228791,
+      "output_area": 17810,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17810,
+        "alpha_centroid_x": 102.90002788982197,
+        "box": [
+          28,
+          12,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 23,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-05-06-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0143011947341767,
+      "source_area": 17307,
+      "target_area": 17805.56125435326,
+      "output_area": 17902,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17902,
+        "alpha_centroid_x": 102.13793404961653,
+        "box": [
+          27,
+          15,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 24,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/06.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 25,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-06-07-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0138669787642764,
+      "source_area": 17348,
+      "target_area": 17832.46459590499,
+      "output_area": 17937,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17937,
+        "alpha_centroid_x": 101.70217889757359,
+        "box": [
+          27,
+          17,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 26,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-06-07-registered/02.png",
+      "t": 0.5,
+      "scale": 1.012030241800333,
+      "source_area": 17391,
+      "target_area": 17811.952812648004,
+      "output_area": 17886,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17886,
+        "alpha_centroid_x": 101.47857879594184,
+        "box": [
+          27,
+          24,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 27,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-06-07-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0158089391694687,
+      "source_area": 17242,
+      "target_area": 17791.464623059197,
+      "output_area": 17831,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17831,
+        "alpha_centroid_x": 101.45917356031465,
+        "box": [
+          27,
+          26,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 28,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/07.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 29,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-07-08-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0036572267576875,
+      "source_area": 17747,
+      "target_area": 17877.04697812058,
+      "output_area": 17854,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17854,
+        "alpha_centroid_x": 99.40001766138651,
+        "box": [
+          28,
+          21,
+          163,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 30,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-07-08-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0091239145448183,
+      "source_area": 17660,
+      "target_area": 17983.72678284451,
+      "output_area": 18026,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18026,
+        "alpha_centroid_x": 100.37971119531807,
+        "box": [
+          28,
+          21,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 31,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-07-08-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0129049685867697,
+      "source_area": 17633,
+      "target_area": 18091.043190512457,
+      "output_area": 18143,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18143,
+        "alpha_centroid_x": 99.68484683777166,
+        "box": [
+          27,
+          21,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 32,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/08.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 33,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-08-09-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0126658903279684,
+      "source_area": 17691,
+      "target_area": 18141.98260632824,
+      "output_area": 18180,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18180,
+        "alpha_centroid_x": 99.20752350642826,
+        "box": [
+          27,
+          20,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 34,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-08-09-registered/02.png",
+      "t": 0.5,
+      "scale": 1.010478743180735,
+      "source_area": 17712,
+      "target_area": 18085.143847921125,
+      "output_area": 18057,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18057,
+        "alpha_centroid_x": 99.57845041731154,
+        "box": [
+          28,
+          20,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 35,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-08-09-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0076437747832208,
+      "source_area": 17756,
+      "target_area": 18028.483165115114,
+      "output_area": 18003,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18003,
+        "alpha_centroid_x": 99.2267535821938,
+        "box": [
+          28,
+          21,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 36,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/09.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 37,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-09-10-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0220588235294117,
+      "source_area": 17135,
+      "target_area": 18029.721325593044,
+      "output_area": 17960,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17960,
+        "alpha_centroid_x": 97.90196188554431,
+        "box": [
+          26,
+          25,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 38,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-09-10-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0220588235294117,
+      "source_area": 17157,
+      "target_area": 18087.628036865408,
+      "output_area": 17998,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17998,
+        "alpha_centroid_x": 98.00250728436187,
+        "box": [
+          26,
+          25,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 39,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-09-10-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0145985401459854,
+      "source_area": 17329,
+      "target_area": 18145.720729226985,
+      "output_area": 17930,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17930,
+        "alpha_centroid_x": 97.77954281485097,
+        "box": [
+          26,
+          26,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 40,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/10.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 41,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-10-11-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0203419786906862,
+      "source_area": 17400,
+      "target_area": 18115.100910524594,
+      "output_area": 18247,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18247,
+        "alpha_centroid_x": 98.58087071781317,
+        "box": [
+          26,
+          19,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 42,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-10-11-registered/02.png",
+      "t": 0.5,
+      "scale": 1.013084404841304,
+      "source_area": 17564,
+      "target_area": 18026.635959046824,
+      "output_area": 18054,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18054,
+        "alpha_centroid_x": 98.44909507869382,
+        "box": [
+          27,
+          21,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 43,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-10-11-registered/03.png",
+      "t": 0.75,
+      "scale": 1.012367193786131,
+      "source_area": 17503,
+      "target_area": 17938.603025457258,
+      "output_area": 17995,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17995,
+        "alpha_centroid_x": 98.36024679226281,
+        "box": [
+          27,
+          21,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 44,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/11.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 45,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-11-12-registered/01.png",
+      "t": 0.25,
+      "scale": 1.022652250565543,
+      "source_area": 17152,
+      "target_area": 17937.86391406428,
+      "output_area": 17960,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17960,
+        "alpha_centroid_x": 98.16933504053414,
+        "box": [
+          27,
+          18,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 46,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-11-12-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0190949023245974,
+      "source_area": 17356,
+      "target_area": 18025.15051254773,
+      "output_area": 18087,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18087,
+        "alpha_centroid_x": 97.60445990084928,
+        "box": [
+          26,
+          18,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 47,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-11-12-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0215125235209108,
+      "source_area": 17358,
+      "target_area": 18112.86185225521,
+      "output_area": 18191,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18191,
+        "alpha_centroid_x": 97.45719520165842,
+        "box": [
+          26,
+          17,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 48,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/12.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 49,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-12-13-registered/01.png",
+      "t": 0.25,
+      "scale": 1.001701040863801,
+      "source_area": 18022,
+      "target_area": 18083.364464273087,
+      "output_area": 18022,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18022,
+        "alpha_centroid_x": 99.1577734983725,
+        "box": [
+          28,
+          14,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 50,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-12-13-registered/02.png",
+      "t": 0.5,
+      "scale": 1.004186366063209,
+      "source_area": 17817,
+      "target_area": 17966.489222995137,
+      "output_area": 18064,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18064,
+        "alpha_centroid_x": 99.60208710802087,
+        "box": [
+          28,
+          12,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 51,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-12-13-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0212274140996744,
+      "source_area": 17116,
+      "target_area": 17850.369362279846,
+      "output_area": 17939,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17939,
+        "alpha_centroid_x": 100.04756381028612,
+        "box": [
+          28,
+          10,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 52,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/13.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 53,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-13-14-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0072463768115942,
+      "source_area": 17597,
+      "target_area": 17915.7189099755,
+      "output_area": 17861,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 17861,
+        "alpha_centroid_x": 99.67238446652553,
+        "box": [
+          26,
+          9,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 54,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-13-14-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0145985401459854,
+      "source_area": 17454,
+      "target_area": 18098.279338102857,
+      "output_area": 18030,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18030,
+        "alpha_centroid_x": 99.68872638637683,
+        "box": [
+          26,
+          9,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 55,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-13-14-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0220588235294117,
+      "source_area": 17425,
+      "target_area": 18282.700049375137,
+      "output_area": 18236,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18236,
+        "alpha_centroid_x": 99.72312710446023,
+        "box": [
+          26,
+          8,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 56,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/14.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 57,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-14-15-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0113532682360402,
+      "source_area": 18131,
+      "target_area": 18545.029238836454,
+      "output_area": 18630,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18630,
+        "alpha_centroid_x": 99.25392429192905,
+        "box": [
+          26,
+          10,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 58,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-14-15-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0162673390482015,
+      "source_area": 18030,
+      "target_area": 18621.371458622507,
+      "output_area": 18644,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18644,
+        "alpha_centroid_x": 99.8527550986012,
+        "box": [
+          27,
+          9,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 59,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-14-15-registered/03.png",
+      "t": 0.75,
+      "scale": 1.0164420194058064,
+      "source_area": 18098,
+      "target_area": 18698.027947771316,
+      "output_area": 18715,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18715,
+        "alpha_centroid_x": 99.64090136058059,
+        "box": [
+          27,
+          7,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 60,
+      "kind": "hard_anchor",
+      "source": "Art/QA/sitting-v10/anchors/15.png",
+      "scale": 1.0
+    },
+    {
+      "frame": 61,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-15-00-registered/01.png",
+      "t": 0.25,
+      "scale": 1.0091633046164599,
+      "source_area": 18286,
+      "target_area": 18622.655781479392,
+      "output_area": 18630,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18630,
+        "alpha_centroid_x": 100.88138817823642,
+        "box": [
+          28,
+          7,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 62,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-15-00-registered/02.png",
+      "t": 0.5,
+      "scale": 1.0071834830772126,
+      "source_area": 18209,
+      "target_area": 18471.547715337787,
+      "output_area": 18468,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18468,
+        "alpha_centroid_x": 100.56656733509722,
+        "box": [
+          28,
+          9,
+          165,
+          204
+        ]
+      }
+    },
+    {
+      "frame": 63,
+      "kind": "generated_mid_whole_cat_regularized",
+      "source": "Art/QA/sitting-v10/pair-15-00-registered/03.png",
+      "t": 0.75,
+      "scale": 0.995760734282243,
+      "source_area": 18478,
+      "target_area": 18321.665771180124,
+      "output_area": 18326,
+      "target_center_x": 96.0,
+      "output_metrics": {
+        "area": 18326,
+        "alpha_centroid_x": 100.01773043438307,
+        "box": [
+          28,
+          9,
+          164,
+          204
+        ]
+      }
+    }
+  ]
+}

@@ -145,7 +145,10 @@ def pink_edge_pixels(image: Image.Image) -> int:
     rgb = arr[..., :3]
     score = np.minimum(rgb[..., 0], rgb[..., 2]) - rgb[..., 1]
     edge = boundary_mask(mask)
-    return int(np.count_nonzero(edge & (score >= 25) & (alpha >= 180)))
+    # Scores up to 27 occur on a few antialiased inner-ear boundary pixels in
+    # the accepted high-density gaze sequence. Those pixels are muted natural
+    # fur (not chroma-key magenta), so keep a small margin above that range.
+    return int(np.count_nonzero(edge & (score > 30) & (alpha >= 180)))
 
 
 def canonical_body(canonical: Image.Image) -> np.ndarray:

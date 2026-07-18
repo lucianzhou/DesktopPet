@@ -18,7 +18,7 @@ cp "$ROOT/Assets/baomihua-interaction-v5.png" "$CONTENTS/Resources/Assets/"
 cp "$ROOT/Assets/baomihua-sleep-v3.png" "$CONTENTS/Resources/Assets/"
 cp "$ROOT/Assets/baomihua-wake-v7.png" "$CONTENTS/Resources/Assets/"
 cp "$ROOT/Assets/baomihua-neutral.png" "$CONTENTS/Resources/Assets/"
-cp "$ROOT/Assets/baomihua-gaze-v8-uniform.png" "$CONTENTS/Resources/Assets/"
+cp "$ROOT/Assets/baomihua-gaze-v10-64.png" "$CONTENTS/Resources/Assets/"
 
 codesign --force --deep --sign - "$APP_DIR"
 echo "$APP_DIR"

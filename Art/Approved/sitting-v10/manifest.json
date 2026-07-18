@@ -1,0 +1,39 @@
+{
+  "schema": "desktop-pet.sitting-v10.approved.v1",
+  "runtime_asset": "Assets/baomihua-gaze-v10-64.png",
+  "atlas": "Art/Approved/sitting-v10/atlas.png",
+  "layout": {
+    "columns": 8,
+    "rows": 8,
+    "frame_count": 64,
+    "cell_size": [192, 208]
+  },
+  "construction": {
+    "hard_anchor_count": 16,
+    "generated_midpoints_per_anchor_pair": 3,
+    "hard_anchors_modified": false,
+    "allowed_final_transform": "whole-cat uniform scale and translation only",
+    "forbidden": [
+      "crossfade",
+      "optical flow",
+      "local warp",
+      "face compositing",
+      "body compositing"
+    ]
+  },
+  "qa": {
+    "minimum_adjacent_body_iou": 0.9697211155378486,
+    "closing_body_iou_63_to_0": 0.9881194074742462,
+    "full_sprite_width_range": [135, 139],
+    "maximum_adjacent_foreground_area_change": 0.0153,
+    "whole_cat_scale_range": [0.9947566743047264, 1.022652250565543],
+    "visual_qa": "pass",
+    "blocking_frames": []
+  },
+  "artifacts": {
+    "contact": "Art/Approved/sitting-v10/contact.png",
+    "preview": "Art/Approved/sitting-v10/preview.gif",
+    "registration": "Art/Approved/sitting-v10/registration.json",
+    "validation": "Art/Approved/sitting-v10/validation.json"
+  }
+}
