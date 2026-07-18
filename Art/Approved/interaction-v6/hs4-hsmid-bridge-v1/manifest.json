@@ -1,0 +1,14 @@
+{
+  "schema": "desktop-pet.interaction-v6-bridge.v1",
+  "segment": "HS4-r2_to_HSmid",
+  "identity_anchor": "Art/Candidates/baomihua-canonical-front-crouch-v5.png",
+  "source": "Art/Approved/interaction-v6/hs4-hsmid-bridge-v1/source.png",
+  "alpha": "Art/Approved/interaction-v6/hs4-hsmid-bridge-v1/alpha.png",
+  "registered_frame": "Art/Approved/interaction-v6/hs4-hsmid-bridge-v1/frame.png",
+  "generation_strategy": "coherent three-pose strip with the complete middle cat extracted",
+  "registration": "whole-cat uniform scale and translation with locked head span",
+  "baseline": 204,
+  "cross_frame_blending": false,
+  "local_warp": false,
+  "face_or_body_compositing": false
+}

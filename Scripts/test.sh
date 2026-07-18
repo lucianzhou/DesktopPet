@@ -54,6 +54,16 @@ assert validation["failures"] == resolution["failed_checks"]
 assert resolution["decision"] == "accept" and resolution["severity"] == "minor"
 '
 
+# The approved HS4->HSmid bridge comes from one coherent three-pose strip and
+# passes the expanded full-body temporal gate without a reviewed exception.
+"$PYTHON" Scripts/validate-interaction-proportions.py \
+  --atlas Art/QA/interaction-v6/hs4-hsmid-bridge-v1/atlas.png \
+  --canonical Art/Approved/interaction-v6/rise-v1/frames/00-F00.png \
+  --rows 1 \
+  --columns 3 \
+  --mode-map Art/QA/interaction-v6/hs4-hsmid-bridge-v1/mode-map.json \
+  --json-out Art/QA/interaction-v6/hs4-hsmid-bridge-v1/proportions.json
+
 # The approved HS1->HS4 bridge is a complete generated cat registered with the
 # same whole-body transform. Two one-pixel raster reversals are independently
 # reviewed at normal pet size and recorded as minor, non-visible warnings.
