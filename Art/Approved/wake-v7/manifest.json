@@ -1,0 +1,62 @@
+{
+  "columns": 8,
+  "groups": {
+    "approved_cells": {"mode": "copy", "safe_margin": 0}
+  },
+  "frames": [
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/00.png", "group": "approved_cells", "label": "sleep_anchor"},
+    {"source": "../../QA/wake-approved-source/segment-a-r1-scale-locked/01.png", "group": "approved_cells", "label": "wake_a01"},
+    {"source": "../../QA/wake-approved-source/segment-a-r1-scale-locked/02.png", "group": "approved_cells", "label": "wake_a02"},
+    {"source": "../../QA/wake-approved-source/segment-a-r1-scale-locked/03.png", "group": "approved_cells", "label": "wake_a03"},
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/01.png", "group": "approved_cells", "label": "low_awake_anchor"},
+    {"source": "../../QA/wake-approved-source/segment-a-r1-scale-locked/05.png", "group": "approved_cells", "label": "wake_a05"},
+    {"source": "../../QA/wake-approved-source/segment-a-r1-scale-locked/06.png", "group": "approved_cells", "label": "wake_a06"},
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/02.png", "group": "approved_cells", "label": "forelegs_extended_anchor"},
+
+    {"source": "../../QA/wake-approved-source/segment-b1-r1-scale-locked/01.png", "group": "approved_cells", "label": "stretch_rise_01"},
+    {"source": "../../QA/wake-approved-source/segment-b1-r1-scale-locked/02.png", "group": "approved_cells", "label": "stretch_rise_02"},
+    {"source": "../../QA/wake-approved-source/segment-b1-r1-scale-locked/03.png", "group": "approved_cells", "label": "stretch_rise_03"},
+    {"source": "../../QA/wake-approved-source/segment-b1-r1-scale-locked/04.png", "group": "approved_cells", "label": "stretch_rise_04"},
+    {"source": "../../QA/wake-approved-source/segment-b1-r1-scale-locked/05.png", "group": "approved_cells", "label": "stretch_rise_05"},
+    {"source": "../../QA/wake-approved-source/segment-b1-r1-scale-locked/06.png", "group": "approved_cells", "label": "stretch_rise_06"},
+    {"source": "../../QA/wake-approved-source/segment-b1-r1-scale-locked/07.png", "group": "approved_cells", "label": "stretch_peak"},
+
+    {"source": "../../QA/wake-approved-source/segment-b2-r1-scale-locked/01.png", "group": "approved_cells", "label": "yawn_open_01"},
+    {"source": "../../QA/wake-approved-source/segment-b2-r1-scale-locked/02.png", "group": "approved_cells", "label": "yawn_open_02"},
+    {"source": "../../QA/wake-approved-source/segment-b2-r1-scale-locked/03.png", "group": "approved_cells", "label": "yawn_open_03"},
+    {"source": "../../QA/wake-approved-source/segment-b2-r1-scale-locked/04.png", "group": "approved_cells", "label": "yawn_open_04"},
+    {"source": "../../QA/wake-approved-source/segment-b2-r1-scale-locked/05.png", "group": "approved_cells", "label": "yawn_open_05"},
+    {"source": "../../QA/wake-approved-source/segment-b2-r1-scale-locked/06.png", "group": "approved_cells", "label": "yawn_open_06"},
+    {"source": "../../QA/wake-approved-source/segment-b2-r1-scale-locked/07.png", "group": "approved_cells", "label": "full_yawn"},
+
+    {"source": "../../QA/wake-approved-source/segment-c1-r1-scale-locked/01.png", "group": "approved_cells", "label": "yawn_close_01"},
+    {"source": "../../QA/wake-approved-source/segment-c1-r1-scale-locked/02.png", "group": "approved_cells", "label": "yawn_close_02"},
+    {"source": "../../QA/wake-approved-source/segment-c1-r1-scale-locked/03.png", "group": "approved_cells", "label": "yawn_close_03"},
+    {"source": "../../QA/wake-approved-source/segment-c1-r1-scale-locked/04.png", "group": "approved_cells", "label": "paws_retract_04"},
+    {"source": "../../QA/wake-approved-source/segment-c1-r1-scale-locked/05.png", "group": "approved_cells", "label": "paws_retract_05"},
+    {"source": "../../QA/wake-approved-source/segment-c1-r1-scale-locked/06.png", "group": "approved_cells", "label": "paws_retract_06"},
+    {"source": "../../QA/wake-approved-source/segment-c1-r1-scale-locked/07.png", "group": "approved_cells", "label": "low_settle"},
+
+    {"source": "../../QA/wake-approved-source/segment-c2-r1-scale-locked/01.png", "group": "approved_cells", "label": "crouch_rise_01"},
+    {"source": "../../QA/wake-approved-source/segment-c2-r1-scale-locked/02.png", "group": "approved_cells", "label": "crouch_rise_02"},
+    {"source": "../../QA/wake-approved-source/segment-c2-r1-scale-locked/03.png", "group": "approved_cells", "label": "crouch_rise_03"},
+    {"source": "../../QA/wake-approved-source/segment-c2-r1-scale-locked/04.png", "group": "approved_cells", "label": "crouch_rise_04"},
+    {"source": "../../QA/wake-approved-source/segment-c2-r1-scale-locked/05.png", "group": "approved_cells", "label": "crouch_rise_05"},
+    {"source": "../../QA/wake-approved-source/segment-c2-r1-scale-locked/06.png", "group": "approved_cells", "label": "crouch_rise_06"},
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/06.png", "group": "approved_cells", "label": "front_crouch_anchor"},
+
+    {"source": "../../QA/wake-approved-source/segment-d-r1-scale-locked/01.png", "group": "approved_cells", "label": "sit_rise_01"},
+    {"source": "../../QA/wake-approved-source/segment-d-r1-scale-locked/02.png", "group": "approved_cells", "label": "sit_rise_02"},
+    {"source": "../../QA/wake-approved-source/segment-d-micro-r1-scale-locked/01.png", "group": "approved_cells", "label": "sit_rise_03"},
+    {"source": "../../QA/wake-approved-source/segment-d-micro-r1-scale-locked/02.png", "group": "approved_cells", "label": "sit_rise_04"},
+    {"source": "../../QA/wake-approved-source/segment-d-micro-r1-scale-locked/03.png", "group": "approved_cells", "label": "sit_rise_05"},
+    {"source": "../../QA/wake-approved-source/segment-d-micro-r1-scale-locked/04.png", "group": "approved_cells", "label": "sit_rise_06"},
+    {"source": "../../QA/wake-approved-source/segment-d-micro-r1-scale-locked/05.png", "group": "approved_cells", "label": "sit_rise_07"},
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png", "group": "approved_cells", "label": "canonical_sit_anchor"},
+
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png", "group": "approved_cells", "label": "canonical_hold_01"},
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png", "group": "approved_cells", "label": "canonical_hold_02"},
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png", "group": "approved_cells", "label": "canonical_hold_03"},
+    {"source": "../../QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png", "group": "approved_cells", "label": "canonical_hold_04"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "atlas": "Assets/baomihua-sleep-v3.png",
+  "frame_count": 1,
+  "columns": 1,
+  "rows": 1,
+  "frames": [
+    {
+      "frame": 0,
+      "ok": true,
+      "bounds": [
+        23,
+        131,
+        169,
+        204
+      ],
+      "area": 8711,
+      "components": [
+        8711
+      ],
+      "enclosed_transparent": 0,
+      "failures": []
+    }
+  ],
+  "failures": []
+}

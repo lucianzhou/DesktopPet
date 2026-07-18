@@ -4,12 +4,12 @@ import QuartzCore
 @MainActor
 final class PetView: NSView {
     static let cellSize = CGSize(width: 192, height: 208)
-    // gaze-v8 retains the preferred original gaze poses and is registered at
-    // a 136px body width.  The neutral and interaction masters are 145px
-    // wide.  Draw the latter pair at this common isotropic factor so a
-    // sitting/gaze/double-click transition does not make Baomihua grow.
-    // 0.948 is sqrt(mean(gaze-v8 visible area) / neutral visible area).
-    private static let seatedRegistrationScale: CGFloat = 0.948
+    // Wake-v7 ends at a 135px-wide canonical sit and gaze-v8 is registered at
+    // roughly 136px. The neutral and interaction masters are 145px wide, so
+    // draw that pair at the same physical scale to prevent a state-boundary
+    // size pop. Interaction development remains paused, but retaining the
+    // shared registration avoids reintroducing a mismatch later.
+    private static let seatedRegistrationScale: CGFloat = 0.933
 
     private struct DisplayFrame: Equatable {
         let atlas: SpriteAtlas

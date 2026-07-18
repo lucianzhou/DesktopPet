@@ -11,6 +11,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             petController = controller
             controller.showWindow(nil)
             controller.window?.orderFrontRegardless()
+            controller.startVisualQAWakeIfRequested()
         } catch {
             let alert = NSAlert(error: error)
             alert.runModal()

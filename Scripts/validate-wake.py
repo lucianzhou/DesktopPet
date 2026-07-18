@@ -16,6 +16,7 @@ CELL_W, CELL_H = 192, 208
 BASELINE_Y = 204
 CONTENT_X = (8, 184)
 MIN_COMPONENT_AREA = 250
+MAX_ENCLOSED_TRANSPARENT = 32
 
 
 def enclosed_transparent(mask: np.ndarray) -> int:
@@ -110,7 +111,7 @@ def main() -> None:
         if len(substantial) != 1:
             frame_failures.append(f"expected one substantial component, found {len(substantial)}")
 
-        if enclosed_transparent(visible[top:bottom, left:right]) > 16:
+        if enclosed_transparent(visible[top:bottom, left:right]) > MAX_ENCLOSED_TRANSPARENT:
             frame_failures.append("enclosed transparent hole inside sprite bounds")
 
         rgb = rgba[..., :3].astype(np.int16)

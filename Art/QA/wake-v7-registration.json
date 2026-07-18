@@ -1,0 +1,977 @@
+{
+  "schema": "desktop-pet.baomihua-wake-registration.v2",
+  "ok": true,
+  "operation": "complete_cat_shared_group_scale_and_translation_only",
+  "interpolation": false,
+  "cross_frame_blending": false,
+  "local_warping": false,
+  "face_or_body_patching": false,
+  "frame_count": 48,
+  "columns": 8,
+  "rows": 6,
+  "group_scales": {
+    "approved_cells": null
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "label": "sleep_anchor",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/00.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        23,
+        131,
+        169,
+        204
+      ],
+      "visible_area": 8711
+    },
+    {
+      "frame": 1,
+      "label": "wake_a01",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-a-r1-scale-locked/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        22,
+        121,
+        170,
+        204
+      ],
+      "visible_area": 9831
+    },
+    {
+      "frame": 2,
+      "label": "wake_a02",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-a-r1-scale-locked/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        25,
+        117,
+        166,
+        204
+      ],
+      "visible_area": 9818
+    },
+    {
+      "frame": 3,
+      "label": "wake_a03",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-a-r1-scale-locked/03.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        28,
+        117,
+        164,
+        204
+      ],
+      "visible_area": 9458
+    },
+    {
+      "frame": 4,
+      "label": "low_awake_anchor",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        20,
+        108,
+        172,
+        204
+      ],
+      "visible_area": 11561
+    },
+    {
+      "frame": 5,
+      "label": "wake_a05",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-a-r1-scale-locked/05.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        25,
+        99,
+        167,
+        204
+      ],
+      "visible_area": 9981
+    },
+    {
+      "frame": 6,
+      "label": "wake_a06",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-a-r1-scale-locked/06.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        19,
+        74,
+        173,
+        204
+      ],
+      "visible_area": 12880
+    },
+    {
+      "frame": 7,
+      "label": "forelegs_extended_anchor",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        19,
+        72,
+        172,
+        204
+      ],
+      "visible_area": 12866
+    },
+    {
+      "frame": 8,
+      "label": "stretch_rise_01",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b1-r1-scale-locked/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        22,
+        77,
+        170,
+        204
+      ],
+      "visible_area": 11342
+    },
+    {
+      "frame": 9,
+      "label": "stretch_rise_02",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b1-r1-scale-locked/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        20,
+        54,
+        172,
+        204
+      ],
+      "visible_area": 12937
+    },
+    {
+      "frame": 10,
+      "label": "stretch_rise_03",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b1-r1-scale-locked/03.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        21,
+        45,
+        170,
+        204
+      ],
+      "visible_area": 13461
+    },
+    {
+      "frame": 11,
+      "label": "stretch_rise_04",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b1-r1-scale-locked/04.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        22,
+        38,
+        170,
+        204
+      ],
+      "visible_area": 13922
+    },
+    {
+      "frame": 12,
+      "label": "stretch_rise_05",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b1-r1-scale-locked/05.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        21,
+        30,
+        170,
+        204
+      ],
+      "visible_area": 14565
+    },
+    {
+      "frame": 13,
+      "label": "stretch_rise_06",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b1-r1-scale-locked/06.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        20,
+        16,
+        172,
+        204
+      ],
+      "visible_area": 15715
+    },
+    {
+      "frame": 14,
+      "label": "stretch_peak",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b1-r1-scale-locked/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        19,
+        8,
+        172,
+        204
+      ],
+      "visible_area": 16353
+    },
+    {
+      "frame": 15,
+      "label": "yawn_open_01",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b2-r1-scale-locked/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        20,
+        8,
+        171,
+        204
+      ],
+      "visible_area": 16509
+    },
+    {
+      "frame": 16,
+      "label": "yawn_open_02",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b2-r1-scale-locked/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        19,
+        12,
+        172,
+        204
+      ],
+      "visible_area": 16390
+    },
+    {
+      "frame": 17,
+      "label": "yawn_open_03",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b2-r1-scale-locked/03.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        19,
+        18,
+        172,
+        204
+      ],
+      "visible_area": 15917
+    },
+    {
+      "frame": 18,
+      "label": "yawn_open_04",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b2-r1-scale-locked/04.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        20,
+        28,
+        172,
+        204
+      ],
+      "visible_area": 15057
+    },
+    {
+      "frame": 19,
+      "label": "yawn_open_05",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b2-r1-scale-locked/05.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        20,
+        40,
+        171,
+        204
+      ],
+      "visible_area": 14261
+    },
+    {
+      "frame": 20,
+      "label": "yawn_open_06",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b2-r1-scale-locked/06.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        21,
+        56,
+        170,
+        204
+      ],
+      "visible_area": 13480
+    },
+    {
+      "frame": 21,
+      "label": "full_yawn",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-b2-r1-scale-locked/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        26,
+        78,
+        166,
+        204
+      ],
+      "visible_area": 10846
+    },
+    {
+      "frame": 22,
+      "label": "yawn_close_01",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c1-r1-scale-locked/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        25,
+        79,
+        166,
+        204
+      ],
+      "visible_area": 10970
+    },
+    {
+      "frame": 23,
+      "label": "yawn_close_02",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c1-r1-scale-locked/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        25,
+        83,
+        166,
+        204
+      ],
+      "visible_area": 10690
+    },
+    {
+      "frame": 24,
+      "label": "yawn_close_03",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c1-r1-scale-locked/03.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        27,
+        86,
+        164,
+        204
+      ],
+      "visible_area": 10506
+    },
+    {
+      "frame": 25,
+      "label": "paws_retract_04",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c1-r1-scale-locked/04.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        31,
+        92,
+        161,
+        204
+      ],
+      "visible_area": 9987
+    },
+    {
+      "frame": 26,
+      "label": "paws_retract_05",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c1-r1-scale-locked/05.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        37,
+        99,
+        154,
+        204
+      ],
+      "visible_area": 9419
+    },
+    {
+      "frame": 27,
+      "label": "paws_retract_06",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c1-r1-scale-locked/06.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        39,
+        105,
+        153,
+        204
+      ],
+      "visible_area": 8946
+    },
+    {
+      "frame": 28,
+      "label": "low_settle",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c1-r1-scale-locked/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        39,
+        108,
+        152,
+        204
+      ],
+      "visible_area": 8726
+    },
+    {
+      "frame": 29,
+      "label": "crouch_rise_01",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c2-r1-scale-locked/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        38,
+        106,
+        153,
+        204
+      ],
+      "visible_area": 9114
+    },
+    {
+      "frame": 30,
+      "label": "crouch_rise_02",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c2-r1-scale-locked/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        38,
+        101,
+        153,
+        204
+      ],
+      "visible_area": 9436
+    },
+    {
+      "frame": 31,
+      "label": "crouch_rise_03",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c2-r1-scale-locked/03.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        37,
+        85,
+        154,
+        204
+      ],
+      "visible_area": 10639
+    },
+    {
+      "frame": 32,
+      "label": "crouch_rise_04",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c2-r1-scale-locked/04.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        39,
+        83,
+        152,
+        204
+      ],
+      "visible_area": 10498
+    },
+    {
+      "frame": 33,
+      "label": "crouch_rise_05",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c2-r1-scale-locked/05.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        39,
+        76,
+        152,
+        204
+      ],
+      "visible_area": 10977
+    },
+    {
+      "frame": 34,
+      "label": "crouch_rise_06",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-c2-r1-scale-locked/06.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        38,
+        67,
+        154,
+        204
+      ],
+      "visible_area": 12134
+    },
+    {
+      "frame": 35,
+      "label": "front_crouch_anchor",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/06.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        34,
+        63,
+        157,
+        204
+      ],
+      "visible_area": 12969
+    },
+    {
+      "frame": 36,
+      "label": "sit_rise_01",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-d-r1-scale-locked/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        34,
+        75,
+        158,
+        204
+      ],
+      "visible_area": 12012
+    },
+    {
+      "frame": 37,
+      "label": "sit_rise_02",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-d-r1-scale-locked/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        34,
+        62,
+        158,
+        204
+      ],
+      "visible_area": 13136
+    },
+    {
+      "frame": 38,
+      "label": "sit_rise_03",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-d-micro-r1-scale-locked/01.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        34,
+        55,
+        158,
+        204
+      ],
+      "visible_area": 13606
+    },
+    {
+      "frame": 39,
+      "label": "sit_rise_04",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-d-micro-r1-scale-locked/02.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        34,
+        48,
+        158,
+        204
+      ],
+      "visible_area": 14124
+    },
+    {
+      "frame": 40,
+      "label": "sit_rise_05",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-d-micro-r1-scale-locked/03.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        33,
+        43,
+        158,
+        204
+      ],
+      "visible_area": 14536
+    },
+    {
+      "frame": 41,
+      "label": "sit_rise_06",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-d-micro-r1-scale-locked/04.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        32,
+        35,
+        160,
+        204
+      ],
+      "visible_area": 15323
+    },
+    {
+      "frame": 42,
+      "label": "sit_rise_07",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/segment-d-micro-r1-scale-locked/05.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        31,
+        24,
+        160,
+        204
+      ],
+      "visible_area": 16556
+    },
+    {
+      "frame": 43,
+      "label": "canonical_sit_anchor",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        28,
+        21,
+        163,
+        204
+      ],
+      "visible_area": 17408
+    },
+    {
+      "frame": 44,
+      "label": "canonical_hold_01",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        28,
+        21,
+        163,
+        204
+      ],
+      "visible_area": 17408
+    },
+    {
+      "frame": 45,
+      "label": "canonical_hold_02",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        28,
+        21,
+        163,
+        204
+      ],
+      "visible_area": 17408
+    },
+    {
+      "frame": 46,
+      "label": "canonical_hold_03",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        28,
+        21,
+        163,
+        204
+      ],
+      "visible_area": 17408
+    },
+    {
+      "frame": 47,
+      "label": "canonical_hold_04",
+      "source": "/Users/popwind/Documents/Projects/DesktopPet/Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png",
+      "group": "approved_cells",
+      "operation": "exact_cell_copy",
+      "group_scale": null,
+      "safe_margin": 0,
+      "source_size": [
+        192,
+        208
+      ],
+      "registered_box": [
+        28,
+        21,
+        163,
+        204
+      ],
+      "visible_area": 17408
+    }
+  ]
+}

@@ -6,12 +6,23 @@ cd "$ROOT"
 swift run DesktopPetCoreChecks
 
 PYTHON="${PYTHON:-/Users/popwind/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3}"
-"$PYTHON" Scripts/validate-wake.py Assets/baomihua-sleep-v2.png \
+"$PYTHON" Scripts/validate-wake.py Assets/baomihua-sleep-v3.png \
   --columns 1 \
   --rows 1 \
-  --json-out Art/QA/sleep-v2-validation.json
-"$PYTHON" Scripts/validate-wake.py Assets/baomihua-wake.png \
-  --json-out Art/QA/wake-row-v2-validation.json
+  --json-out Art/QA/sleep-v3-validation.json
+"$PYTHON" Scripts/validate-wake.py Assets/baomihua-wake-v7.png \
+  --columns 8 \
+  --rows 6 \
+  --first-anchor Assets/baomihua-sleep-v3.png \
+  --last-anchor Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png \
+  --json-out Art/QA/wake-v7-validation.json
+"$PYTHON" Scripts/validate-wake-continuity.py Assets/baomihua-wake-v7.png \
+  --columns 8 \
+  --rows 6 \
+  --continuous-rows \
+  --first-anchor Assets/baomihua-sleep-v3.png \
+  --last-anchor Art/QA/wake-approved-source/identity-r1-hard-anchor-frames/07.png \
+  --json-out Art/QA/wake-v7-continuity.json
 "$PYTHON" Scripts/validate-gaze-atlas.py Assets/baomihua-gaze-v8-uniform.png \
   --allow-pose-silhouette \
   --canonical Art/Approved/baomihua-canonical-front-crouch-cell.png \
