@@ -66,13 +66,28 @@ TARGET_PATHS = (
     "area",
     "aspect",
     "center_x",
+    "alpha_centroid_x",
+    "alpha_centroid_y",
     "head.width",
     "head.height",
     "head.area",
+    "head.outer_span",
     "head.center_x",
     "head.center_y",
     "face.outer_span",
     "face.area",
+    "ears.left.width",
+    "ears.left.height",
+    "ears.left.area",
+    "ears.left.tip_x",
+    "ears.left.tip_y",
+    "ears.left.outer_x",
+    "ears.right.width",
+    "ears.right.height",
+    "ears.right.area",
+    "ears.right.tip_x",
+    "ears.right.tip_y",
+    "ears.right.outer_x",
     "shoulder.outer_span",
     "shoulder.area",
     "chest.outer_span",
@@ -85,6 +100,9 @@ TARGET_PATHS = (
     "ratios.shoulder_to_head",
     "ratios.chest_to_head",
     "ratios.belly_to_head",
+    "ratios.lower_to_head",
+    "ratios.forelimb_left_to_head",
+    "ratios.forelimb_right_to_head",
     "legs.left.width",
     "legs.right.width",
     "legs.left.area",
@@ -94,6 +112,18 @@ TARGET_PATHS = (
     "legs.spacing",
     "legs.left.bottom",
     "legs.right.bottom",
+    "forelimb_proxy.left.width",
+    "forelimb_proxy.right.width",
+    "forelimb_proxy.left.area",
+    "forelimb_proxy.right.area",
+    "forelimb_proxy.left.center_x",
+    "forelimb_proxy.right.center_x",
+    "forelimb_proxy.left.top",
+    "forelimb_proxy.right.top",
+    "forelimb_proxy.left.bottom",
+    "forelimb_proxy.right.bottom",
+    "forelimb_proxy.left.length",
+    "forelimb_proxy.right.length",
     "paws.left.width",
     "paws.right.width",
     "paws.left.area",
@@ -125,27 +155,74 @@ TEMPORAL_PATHS = (
     "area",
     "aspect",
     "center_x",
+    "alpha_centroid_x",
+    "alpha_centroid_y",
     "head.width",
     "head.height",
     "head.area",
+    "head.outer_span",
     "head.center_x",
     "head.center_y",
+    "face.outer_span",
+    "face.area",
+    "ears.left.width",
+    "ears.left.height",
+    "ears.left.area",
+    "ears.left.tip_x",
+    "ears.left.tip_y",
+    "ears.left.outer_x",
+    "ears.right.width",
+    "ears.right.height",
+    "ears.right.area",
+    "ears.right.tip_x",
+    "ears.right.tip_y",
+    "ears.right.outer_x",
     "shoulder.outer_span",
     "shoulder.area",
     "chest.outer_span",
     "chest.area",
     "belly.outer_span",
     "belly.area",
+    "lower.outer_span",
+    "lower.area",
     "legs.left.width",
     "legs.right.width",
     "legs.left.area",
     "legs.right.area",
     "legs.spacing",
+    "forelimb_proxy.left.width",
+    "forelimb_proxy.right.width",
+    "forelimb_proxy.left.area",
+    "forelimb_proxy.right.area",
+    "forelimb_proxy.left.center_x",
+    "forelimb_proxy.right.center_x",
+    "forelimb_proxy.left.top",
+    "forelimb_proxy.right.top",
+    "forelimb_proxy.left.bottom",
+    "forelimb_proxy.right.bottom",
+    "forelimb_proxy.left.length",
+    "forelimb_proxy.right.length",
     "paws.left.width",
     "paws.right.width",
     "paws.left.area",
     "paws.right.area",
+    "paws.left.center_x",
+    "paws.right.center_x",
+    "paws.left.top",
+    "paws.right.top",
+    "paws.left.bottom",
+    "paws.right.bottom",
     "paws.spacing",
+    "ratios.head_to_body_area",
+    "ratios.shoulder_to_head",
+    "ratios.chest_to_head",
+    "ratios.belly_to_head",
+    "ratios.lower_to_head",
+    "ratios.forelimb_left_to_head",
+    "ratios.forelimb_right_to_head",
+    "ratios.left_paw_to_head",
+    "ratios.right_paw_to_head",
+    "ratios.paw_spacing_to_head",
     "tail.area",
     "tail.outer_span",
     "tail.root_x",
@@ -156,6 +233,39 @@ TEMPORAL_PATHS = (
     "tail.right.area",
     "tail.right.root_x",
     "tail.right.root_y",
+)
+
+# Identity-bearing values that must not briefly reverse direction inside a
+# transition.  Large pose dimensions may change monotonically; this list
+# catches a one-frame shrink followed by a rebound (or the inverse).
+REVERSAL_PATHS = (
+    "alpha_centroid_x",
+    "alpha_centroid_y",
+    "head.outer_span",
+    "head.height",
+    "face.outer_span",
+    "ears.left.width",
+    "ears.left.height",
+    "ears.right.width",
+    "ears.right.height",
+    "forelimb_proxy.left.width",
+    "forelimb_proxy.right.width",
+    "forelimb_proxy.left.length",
+    "forelimb_proxy.right.length",
+    "paws.left.width",
+    "paws.right.width",
+    "paws.left.center_x",
+    "paws.right.center_x",
+    "paws.spacing",
+    "ratios.head_to_body_area",
+    "ratios.shoulder_to_head",
+    "ratios.chest_to_head",
+    "ratios.belly_to_head",
+    "ratios.lower_to_head",
+    "ratios.forelimb_left_to_head",
+    "ratios.forelimb_right_to_head",
+    "ratios.left_paw_to_head",
+    "ratios.right_paw_to_head",
 )
 
 # A phase may contain small secondary motion, but its principal proportions
@@ -284,6 +394,61 @@ def region_metrics(
         "center_x": round(float(xs.mean()), 5),
         "center_y": round(float(absolute_y.mean()), 5),
         "samples": len(outer_spans),
+    }
+
+
+def ear_silhouette_metrics(
+    mask: np.ndarray,
+    box: tuple[int, int, int, int],
+    head_center_x: float,
+) -> dict[str, Any]:
+    """Measure stable left/right upper-head silhouette proxies for the ears.
+
+    Alpha alone cannot semantically segment fur from an attached ear, so this
+    intentionally measures each half of the top 28% of the registered cat.
+    Tip and outer-edge motion still catches the visible ear size/placement pop
+    without requiring generated part masks.
+    """
+
+    left, top, right, bottom = box
+    upper_bottom = min(bottom, top + max(8, round((bottom - top) * 0.28)))
+    split = int(round(head_center_x))
+
+    def side(name: str) -> dict[str, Any]:
+        x0, x1 = (left, min(right, split + 1)) if name == "left" else (max(left, split), right)
+        submask = mask[top:upper_bottom, x0:x1]
+        ys, xs = np.where(submask)
+        if not len(xs):
+            return {
+                "width": None,
+                "height": None,
+                "area": None,
+                "center_x": None,
+                "center_y": None,
+                "tip_x": None,
+                "tip_y": None,
+                "outer_x": None,
+            }
+        absolute_x = xs + x0
+        absolute_y = ys + top
+        tip_y = int(absolute_y.min())
+        tip_band = absolute_x[absolute_y <= tip_y + 1]
+        return {
+            "width": float(absolute_x.max() - absolute_x.min() + 1),
+            "height": float(absolute_y.max() - absolute_y.min() + 1),
+            "area": float(len(absolute_x)),
+            "center_x": round(float(absolute_x.mean()), 5),
+            "center_y": round(float(absolute_y.mean()), 5),
+            "tip_x": round(float(np.median(tip_band)), 5),
+            "tip_y": float(tip_y),
+            "outer_x": float(absolute_x.min() if name == "left" else absolute_x.max()),
+        }
+
+    return {
+        "method": "upper_head_half_silhouette_v1",
+        "band": [top, upper_bottom],
+        "left": side("left"),
+        "right": side("right"),
     }
 
 
@@ -438,6 +603,69 @@ def support_metrics(
     }
 
 
+def forelimb_column_metrics(
+    mask: np.ndarray,
+    box: tuple[int, int, int, int],
+    head_width: float,
+    body_center_x: float,
+) -> dict[str, Any]:
+    """Track both front-support columns even while they merge into the torso.
+
+    The stricter run-based leg tracker is preferable once two legs separate,
+    but seated/rising cats often form one continuous alpha mass.  Fixed
+    anatomical windows around the two approved paw axes provide a continuous
+    width/area/visible-length proxy instead of silently skipping those frames.
+    """
+
+    left, _top, right, bottom = box
+    y0 = max(0, bottom - 64)
+    split_gap = max(1, round(head_width * 0.02))
+    outer_reach = max(8, round(head_width * 0.50))
+
+    def side(name: str) -> dict[str, Any]:
+        if name == "left":
+            x0 = max(left, round(body_center_x - outer_reach))
+            x1 = min(right, round(body_center_x - split_gap))
+        else:
+            x0 = max(left, round(body_center_x + split_gap))
+            x1 = min(right, round(body_center_x + outer_reach))
+        submask = mask[y0:bottom, x0:x1]
+        ys, xs = np.where(submask)
+        if not len(xs):
+            return {
+                "width": None,
+                "area": None,
+                "center_x": None,
+                "center_y": None,
+                "top": None,
+                "bottom": None,
+                "length": None,
+                "samples": 0,
+            }
+        absolute_x = xs + x0
+        absolute_y = ys + y0
+        scan_widths = [int(mask[y, x0:x1].sum()) for y in range(y0, bottom) if mask[y, x0:x1].any()]
+        top_y, bottom_y = int(absolute_y.min()), int(absolute_y.max()) + 1
+        return {
+            "width": float(median(scan_widths)),
+            "area": float(len(absolute_x)),
+            "center_x": round(float(absolute_x.mean()), 5),
+            "center_y": round(float(absolute_y.mean()), 5),
+            "top": top_y,
+            "bottom": bottom_y,
+            "length": float(bottom_y - top_y),
+            "samples": len(scan_widths),
+        }
+
+    left_side, right_side = side("left"), side("right")
+    return {
+        "method": "fixed_front_support_columns_v1",
+        "left": left_side,
+        "right": right_side,
+        "ratio": ratio(left_side["width"], right_side["width"]),
+    }
+
+
 def tail_metrics(mask: np.ndarray, box: tuple[int, int, int, int], head_width: float) -> dict[str, Any]:
     """Approximate the lateral tail-root mass without confusing it with paws."""
 
@@ -516,10 +744,12 @@ def metrics(cell: Image.Image) -> dict[str, Any]:
         return {"blank": True}
     left, top, right, bottom = box
     width, height = right - left, bottom - top
+    alpha_ys, alpha_xs = np.where(mask)
     component_count, components = connected_component_count(mask)
     regions = {name: region_metrics(mask, box, low, high) for name, (low, high) in REGIONS.items()}
     head_width = regions["head"]["outer_span"]
     body_center_x = float(regions["head"]["center_x"])
+    ears = ear_silhouette_metrics(mask, box, body_center_x)
     legs = support_metrics(
         mask,
         box,
@@ -542,6 +772,7 @@ def metrics(cell: Image.Image) -> dict[str, Any]:
         target_clip_ratio=0.22,
         minimum_samples=4,
     )
+    forelimb_proxy = forelimb_column_metrics(mask, box, head_width, body_center_x)
     tail = tail_metrics(mask, box, head_width)
     result: dict[str, Any] = {
         "blank": False,
@@ -552,12 +783,16 @@ def metrics(cell: Image.Image) -> dict[str, Any]:
         "area": int(mask.sum()),
         "center_x": round((left + right - 1) / 2.0, 5),
         "center_y": round((top + bottom - 1) / 2.0, 5),
+        "alpha_centroid_x": round(float(alpha_xs.mean()), 5),
+        "alpha_centroid_y": round(float(alpha_ys.mean()), 5),
         "baseline": bottom,
         "edge_touch": bool(mask[:, 0].any() or mask[:, -1].any() or mask[0, :].any() or mask[-1, :].any()),
         "component_count": component_count,
         "components": components[:4],
         **regions,
+        "ears": ears,
         "legs": legs,
+        "forelimb_proxy": forelimb_proxy,
         "paws": paws,
         "tail": tail,
     }
@@ -566,8 +801,11 @@ def metrics(cell: Image.Image) -> dict[str, Any]:
         "shoulder_to_head": ratio(result["shoulder"]["outer_span"], result["head"]["outer_span"]),
         "chest_to_head": ratio(result["chest"]["outer_span"], result["head"]["outer_span"]),
         "belly_to_head": ratio(result["belly"]["outer_span"], result["head"]["outer_span"]),
+        "lower_to_head": ratio(result["lower"]["outer_span"], result["head"]["outer_span"]),
         "left_leg_to_head": ratio(legs["left"]["width"], result["head"]["outer_span"]),
         "right_leg_to_head": ratio(legs["right"]["width"], result["head"]["outer_span"]),
+        "forelimb_left_to_head": ratio(forelimb_proxy["left"]["width"], result["head"]["outer_span"]),
+        "forelimb_right_to_head": ratio(forelimb_proxy["right"]["width"], result["head"]["outer_span"]),
         "left_paw_to_head": ratio(paws["left"]["width"], result["head"]["outer_span"]),
         "right_paw_to_head": ratio(paws["right"]["width"], result["head"]["outer_span"]),
         "paw_spacing_to_head": ratio(paws["spacing"], result["head"]["outer_span"]),
@@ -598,7 +836,18 @@ def scalar_at(document: dict[str, Any], path: str) -> float | None:
 def tolerance_for(path: str, target: float) -> float:
     """A phase-target tolerance in pixels or a relative scalar unit."""
 
-    if path.endswith(("root_x", "root_y", "center_x", "center_y", ".top", ".bottom", ".spacing")) or path == "center_x":
+    if path.endswith((
+        "root_x",
+        "root_y",
+        "center_x",
+        "center_y",
+        ".top",
+        ".bottom",
+        ".spacing",
+        "tip_x",
+        "tip_y",
+        "outer_x",
+    )) or path == "center_x":
         return 3.0 if not path.startswith("tail.") else 4.0
     if path == "aspect":
         return 0.045
@@ -606,7 +855,7 @@ def tolerance_for(path: str, target: float) -> float:
         return max(0.06, abs(target) * 0.12)
     if path.endswith(".area") or path == "area":
         return max(18.0, abs(target) * (0.18 if path.startswith(("legs.", "paws.", "tail.")) else 0.10))
-    if path.startswith(("legs.", "paws.")):
+    if path.startswith(("legs.", "paws.", "forelimb_proxy.")):
         return max(3.0, abs(target) * 0.12)
     if path.startswith("tail."):
         return max(4.0, abs(target) * 0.15)
@@ -789,13 +1038,24 @@ def failures_for_frame(
 def temporal_limit(path: str, *, cross_phase: bool) -> tuple[str, float]:
     """Return (kind, threshold): relative changes or absolute pixel movement."""
 
-    if path.endswith(("root_x", "root_y", "center_x", "center_y", ".spacing")) or path == "center_x":
+    if path.endswith((
+        "root_x",
+        "root_y",
+        "center_x",
+        "center_y",
+        ".top",
+        ".bottom",
+        ".spacing",
+        "tip_x",
+        "tip_y",
+        "outer_x",
+    )) or path == "center_x":
         return "absolute", 4.0 if cross_phase else 3.0
     if path == "aspect":
         return "relative", 0.08 if cross_phase else 0.06
     if path.endswith(".area") or path == "area":
         return "relative", 0.18 if path.startswith(("legs.", "paws.", "tail.")) else (0.10 if cross_phase else 0.08)
-    if path.startswith(("legs.", "paws.")):
+    if path.startswith(("legs.", "paws.", "forelimb_proxy.")):
         return "relative", 0.16 if cross_phase else 0.12
     if path.startswith("tail."):
         return "relative", 0.18 if cross_phase else 0.14
@@ -845,32 +1105,77 @@ def three_frame_trends(frames: list[dict[str, Any]]) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     for before, current, after in zip(frames, frames[1:], frames[2:]):
         context = (before["mode"], before["anchor_pair"])
-        if context != (current["mode"], current["anchor_pair"]) or context != (after["mode"], after["anchor_pair"]):
-            continue
+        same_context = (
+            context == (current["mode"], current["anchor_pair"])
+            and context == (after["mode"], after["anchor_pair"])
+        )
         failures: list[str] = []
         residuals: dict[str, float] = {}
-        for path in TEMPORAL_PATHS:
+        if same_context:
+            for path in TEMPORAL_PATHS:
+                a = scalar_at(before["metrics"], path)
+                b = scalar_at(current["metrics"], path)
+                c = scalar_at(after["metrics"], path)
+                if a is None or b is None or c is None:
+                    continue
+                kind, _limit = temporal_limit(path, cross_phase=False)
+                midpoint = (a + c) / 2.0
+                amount = abs(b - midpoint) if kind == "absolute" else abs(b - midpoint) / max(1.0, abs(midpoint))
+                residuals[path] = round(amount, 6)
+                limit = 4.0 if kind == "absolute" else (0.16 if path.startswith(("legs.", "paws.", "tail.")) else 0.10)
+                if amount > limit:
+                    failures.append(f"{path}_local_residual={amount:.3f}; limit={limit:.3f}")
+
+        reversals: dict[str, dict[str, float]] = {}
+        for path in REVERSAL_PATHS:
             a = scalar_at(before["metrics"], path)
             b = scalar_at(current["metrics"], path)
             c = scalar_at(after["metrics"], path)
             if a is None or b is None or c is None:
                 continue
-            kind, _limit = temporal_limit(path, cross_phase=False)
-            midpoint = (a + c) / 2.0
-            amount = abs(b - midpoint) if kind == "absolute" else abs(b - midpoint) / max(1.0, abs(midpoint))
-            residuals[path] = round(amount, 6)
-            limit = 4.0 if kind == "absolute" else (0.16 if path.startswith(("legs.", "paws.", "tail.")) else 0.10)
-            if amount > limit:
-                failures.append(f"{path}_local_residual={amount:.3f}; limit={limit:.3f}")
+            first_delta, second_delta = b - a, c - b
+            if first_delta * second_delta >= 0.0:
+                continue
+            backtrack = min(abs(first_delta), abs(second_delta))
+            rolling_range = max(a, b, c) - min(a, b, c)
+            noise = reversal_noise(path, (a + b + c) / 3.0)
+            reversals[path] = {
+                "first_delta": round(first_delta, 6),
+                "second_delta": round(second_delta, 6),
+                "backtrack": round(backtrack, 6),
+                "rolling_range": round(rolling_range, 6),
+                "noise": round(noise, 6),
+            }
+            if backtrack > noise:
+                failures.append(
+                    f"{path}_direction_reversal={backtrack:.3f}; "
+                    f"rolling_range={rolling_range:.3f}; noise={noise:.3f}"
+                )
         records.append({
             "before": before["frame"],
             "frame": current["frame"],
             "after": after["frame"],
             "context": {"mode": context[0], "anchor_pair": context[1]},
+            "same_context": same_context,
             "residuals": residuals,
+            "reversals": reversals,
             "failures": failures,
         })
     return records
+
+
+def reversal_noise(path: str, midpoint: float) -> float:
+    """Ignore one-pixel matte quantisation, but catch a visible rebound."""
+
+    if path.startswith("ratios."):
+        return 0.02
+    if path in {"alpha_centroid_x", "alpha_centroid_y"} or path.endswith("center_x"):
+        return 0.75
+    if path.startswith("paws."):
+        return max(1.5, abs(midpoint) * 0.04)
+    if path.startswith("forelimb_proxy."):
+        return max(1.5, abs(midpoint) * 0.04)
+    return max(1.5, abs(midpoint) * 0.025)
 
 
 def anchor_progress_noise(path: str, endpoint: float) -> float:
