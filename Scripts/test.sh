@@ -26,3 +26,30 @@ PYTHON="${PYTHON:-/Users/popwind/.cache/codex-runtimes/codex-primary-runtime/dep
   --columns 8 \
   --prepare-report Art/QA/interaction-v5/registration.json \
   --json-out Art/QA/interaction-v5/validation.json
+
+# The approved interaction-v6 rise segment contains complete generated cats
+# only. Registration applies one uniform transform to each whole cat, locks the
+# head scale and paw baseline, and forbids local warps or cross-frame parts.
+# The validator intentionally exits non-zero for the single reviewed tail-matte
+# metric warning; the recorded resolution is checked immediately afterwards.
+set +e
+"$PYTHON" Scripts/validate-interaction-proportions.py \
+  --atlas Art/Approved/interaction-v6/rise-v1/atlas.png \
+  --canonical Art/Approved/interaction-v6/rise-v1/frames/00-F00.png \
+  --half-rise-master Art/Approved/interaction-v6/rise-v1/frames/08-F08.png \
+  --rows 1 \
+  --columns 9 \
+  --mode-map Art/QA/interaction-v6/rise-v1/mode-map.json \
+  --json-out Art/QA/interaction-v6/rise-v1/proportions.json
+rise_status=$?
+set -e
+[[ $rise_status -eq 1 ]]
+"$PYTHON" -c '
+import json
+from pathlib import Path
+
+validation = json.loads(Path("Art/QA/interaction-v6/rise-v1/proportions.json").read_text())
+resolution = json.loads(Path("Art/QA/interaction-v6/rise-v1/metric-resolution.json").read_text())
+assert validation["failures"] == resolution["failed_checks"]
+assert resolution["decision"] == "accept" and resolution["severity"] == "minor"
+'

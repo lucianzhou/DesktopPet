@@ -1,0 +1,4043 @@
+{
+  "schema": "desktop-pet.interaction-proportions.v2",
+  "ok": false,
+  "atlas": "Art/Approved/interaction-v6/rise-v1/atlas.png",
+  "canonical": "Art/Approved/interaction-v6/rise-v1/frames/00-F00.png",
+  "half_rise_master": "Art/Approved/interaction-v6/rise-v1/frames/08-F08.png",
+  "standing_master": null,
+  "rows": 1,
+  "columns": 9,
+  "canonical_metrics": {
+    "blank": false,
+    "box": [
+      23,
+      7,
+      168,
+      204
+    ],
+    "width": 145,
+    "height": 197,
+    "aspect": 0.736041,
+    "area": 20211,
+    "center_x": 95.0,
+    "center_y": 105.0,
+    "baseline": 204,
+    "edge_touch": false,
+    "component_count": 1,
+    "components": [
+      20211
+    ],
+    "head": {
+      "box": [
+        57,
+        19,
+        150,
+        92
+      ],
+      "width": 93.0,
+      "height": 73.0,
+      "area": 6215.0,
+      "outer_span": 87.0,
+      "central_span": 87.0,
+      "center_x": 102.64505,
+      "center_y": 56.29638,
+      "samples": 73
+    },
+    "face": {
+      "box": [
+        57,
+        42,
+        149,
+        90
+      ],
+      "width": 92.0,
+      "height": 48.0,
+      "area": 4245.0,
+      "outer_span": 88.0,
+      "central_span": 88.0,
+      "center_x": 102.65253,
+      "center_y": 65.81272,
+      "samples": 48
+    },
+    "shoulder": {
+      "box": [
+        47,
+        86,
+        160,
+        119
+      ],
+      "width": 113.0,
+      "height": 33.0,
+      "area": 3359.0,
+      "outer_span": 102.0,
+      "central_span": 102.0,
+      "center_x": 102.91456,
+      "center_y": 102.61745,
+      "samples": 33
+    },
+    "chest": {
+      "box": [
+        40,
+        102,
+        167,
+        135
+      ],
+      "width": 127.0,
+      "height": 33.0,
+      "area": 3754.0,
+      "outer_span": 113.0,
+      "central_span": 113.0,
+      "center_x": 102.88732,
+      "center_y": 118.62866,
+      "samples": 33
+    },
+    "belly": {
+      "box": [
+        32,
+        125,
+        168,
+        161
+      ],
+      "width": 136.0,
+      "height": 36.0,
+      "area": 4631.0,
+      "outer_span": 130.0,
+      "central_span": 130.0,
+      "center_x": 102.1924,
+      "center_y": 142.77348,
+      "samples": 36
+    },
+    "lower": {
+      "box": [
+        23,
+        145,
+        168,
+        182
+      ],
+      "width": 145.0,
+      "height": 37.0,
+      "area": 5016.0,
+      "outer_span": 137.0,
+      "central_span": 137.0,
+      "center_x": 97.12061,
+      "center_y": 163.2508,
+      "samples": 37
+    },
+    "legs": {
+      "left": {
+        "width": null,
+        "area": null,
+        "center_x": null,
+        "center_y": null,
+        "top": null,
+        "bottom": null,
+        "samples": 0
+      },
+      "right": {
+        "width": null,
+        "area": null,
+        "center_x": null,
+        "center_y": null,
+        "top": null,
+        "bottom": null,
+        "samples": 0
+      },
+      "combined": null,
+      "ratio": null,
+      "spacing": null,
+      "samples": 0,
+      "coverage": 0.0,
+      "reliable": false,
+      "left_width": null,
+      "right_width": null
+    },
+    "paws": {
+      "left": {
+        "width": 36.0,
+        "area": 659.0,
+        "center_x": 85.0,
+        "center_y": 193.5,
+        "top": 184,
+        "bottom": 204,
+        "samples": 20
+      },
+      "right": {
+        "width": 35.0,
+        "area": 647.0,
+        "center_x": 120.5,
+        "center_y": 193.5,
+        "top": 184,
+        "bottom": 204,
+        "samples": 20
+      },
+      "combined": 71.0,
+      "ratio": 1.0285714285714285,
+      "spacing": 35.5,
+      "samples": 20,
+      "coverage": 1.0,
+      "reliable": true,
+      "left_width": 36.0,
+      "right_width": 35.0
+    },
+    "tail": {
+      "side": "right",
+      "area": 2581.0,
+      "outer_span": 130.0,
+      "root_x": 134.0,
+      "root_y": 142.5,
+      "left": {
+        "area": 1767.0,
+        "outer_span": 21.0,
+        "root_x": 57.0,
+        "root_y": 142.5,
+        "box": [
+          23,
+          102,
+          59,
+          184
+        ]
+      },
+      "right": {
+        "area": 2581.0,
+        "outer_span": 33.0,
+        "root_x": 134.0,
+        "root_y": 142.5,
+        "box": [
+          132,
+          102,
+          168,
+          184
+        ]
+      }
+    },
+    "ratios": {
+      "head_to_body_area": 0.307506,
+      "shoulder_to_head": 1.172414,
+      "chest_to_head": 1.298851,
+      "belly_to_head": 1.494253,
+      "left_leg_to_head": null,
+      "right_leg_to_head": null,
+      "left_paw_to_head": 0.413793,
+      "right_paw_to_head": 0.402299,
+      "paw_spacing_to_head": 0.408046
+    },
+    "face_width": 88.0,
+    "face_area_proxy": 4245.0,
+    "shoulder_width": 102.0,
+    "torso_width": 113.0,
+    "lower_width": 137.0,
+    "outer_lower_width": 137.0
+  },
+  "half_rise_metrics": {
+    "blank": false,
+    "box": [
+      23,
+      4,
+      163,
+      204
+    ],
+    "width": 140,
+    "height": 200,
+    "aspect": 0.7,
+    "area": 19873,
+    "center_x": 92.5,
+    "center_y": 103.5,
+    "baseline": 204,
+    "edge_touch": false,
+    "component_count": 1,
+    "components": [
+      19873
+    ],
+    "head": {
+      "box": [
+        57,
+        16,
+        150,
+        90
+      ],
+      "width": 93.0,
+      "height": 74.0,
+      "area": 6288.0,
+      "outer_span": 87.0,
+      "central_span": 87.0,
+      "center_x": 102.63772,
+      "center_y": 53.69323,
+      "samples": 74
+    },
+    "face": {
+      "box": [
+        57,
+        40,
+        149,
+        88
+      ],
+      "width": 92.0,
+      "height": 48.0,
+      "area": 4234.0,
+      "outer_span": 88.0,
+      "central_span": 88.0,
+      "center_x": 102.77161,
+      "center_y": 63.64242,
+      "samples": 48
+    },
+    "shoulder": {
+      "box": [
+        49,
+        84,
+        158,
+        118
+      ],
+      "width": 109.0,
+      "height": 34.0,
+      "area": 3406.0,
+      "outer_span": 101.0,
+      "central_span": 101.0,
+      "center_x": 103.00499,
+      "center_y": 101.07281,
+      "samples": 34
+    },
+    "chest": {
+      "box": [
+        44,
+        100,
+        162,
+        134
+      ],
+      "width": 118.0,
+      "height": 34.0,
+      "area": 3722.0,
+      "outer_span": 109.0,
+      "central_span": 109.0,
+      "center_x": 102.96292,
+      "center_y": 116.98549,
+      "samples": 34
+    },
+    "belly": {
+      "box": [
+        33,
+        124,
+        163,
+        160
+      ],
+      "width": 130.0,
+      "height": 36.0,
+      "area": 4328.0,
+      "outer_span": 121.0,
+      "central_span": 121.0,
+      "center_x": 101.80314,
+      "center_y": 141.74307,
+      "samples": 36
+    },
+    "lower": {
+      "box": [
+        23,
+        144,
+        163,
+        182
+      ],
+      "width": 140.0,
+      "height": 38.0,
+      "area": 4885.0,
+      "outer_span": 131.0,
+      "central_span": 131.0,
+      "center_x": 95.30092,
+      "center_y": 162.92385,
+      "samples": 38
+    },
+    "legs": {
+      "left": {
+        "width": null,
+        "area": null,
+        "center_x": null,
+        "center_y": null,
+        "top": null,
+        "bottom": null,
+        "samples": 0
+      },
+      "right": {
+        "width": null,
+        "area": null,
+        "center_x": null,
+        "center_y": null,
+        "top": null,
+        "bottom": null,
+        "samples": 0
+      },
+      "combined": null,
+      "ratio": null,
+      "spacing": null,
+      "samples": 0,
+      "coverage": 0.0,
+      "reliable": false,
+      "left_width": null,
+      "right_width": null
+    },
+    "paws": {
+      "left": {
+        "width": 35.0,
+        "area": 633.0,
+        "center_x": 85.0,
+        "center_y": 193.5,
+        "top": 184,
+        "bottom": 204,
+        "samples": 20
+      },
+      "right": {
+        "width": 34.5,
+        "area": 630.0,
+        "center_x": 120.5,
+        "center_y": 193.5,
+        "top": 184,
+        "bottom": 204,
+        "samples": 20
+      },
+      "combined": 69.5,
+      "ratio": 1.0144927536231885,
+      "spacing": 35.5,
+      "samples": 20,
+      "coverage": 1.0,
+      "reliable": true,
+      "left_width": 35.0,
+      "right_width": 34.5
+    },
+    "tail": {
+      "side": "right",
+      "area": 2655.0,
+      "outer_span": 121.0,
+      "root_x": 130.0,
+      "root_y": 141.5,
+      "left": {
+        "area": 1539.0,
+        "outer_span": 16.0,
+        "root_x": 56.0,
+        "root_y": 141.5,
+        "box": [
+          23,
+          100,
+          58,
+          184
+        ]
+      },
+      "right": {
+        "area": 2655.0,
+        "outer_span": 32.0,
+        "root_x": 130.0,
+        "root_y": 141.5,
+        "box": [
+          128,
+          100,
+          163,
+          184
+        ]
+      }
+    },
+    "ratios": {
+      "head_to_body_area": 0.316409,
+      "shoulder_to_head": 1.16092,
+      "chest_to_head": 1.252874,
+      "belly_to_head": 1.390805,
+      "left_leg_to_head": null,
+      "right_leg_to_head": null,
+      "left_paw_to_head": 0.402299,
+      "right_paw_to_head": 0.396552,
+      "paw_spacing_to_head": 0.408046
+    },
+    "face_width": 88.0,
+    "face_area_proxy": 4234.0,
+    "shoulder_width": 101.0,
+    "torso_width": 109.0,
+    "lower_width": 131.0,
+    "outer_lower_width": 131.0
+  },
+  "standing_metrics": null,
+  "frames": [
+    {
+      "frame": "F00",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.0,
+      "metrics": {
+        "blank": false,
+        "box": [
+          23,
+          7,
+          168,
+          204
+        ],
+        "width": 145,
+        "height": 197,
+        "aspect": 0.736041,
+        "area": 20211,
+        "center_x": 95.0,
+        "center_y": 105.0,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          20211
+        ],
+        "head": {
+          "box": [
+            57,
+            19,
+            150,
+            92
+          ],
+          "width": 93.0,
+          "height": 73.0,
+          "area": 6215.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 102.64505,
+          "center_y": 56.29638,
+          "samples": 73
+        },
+        "face": {
+          "box": [
+            57,
+            42,
+            149,
+            90
+          ],
+          "width": 92.0,
+          "height": 48.0,
+          "area": 4245.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 102.65253,
+          "center_y": 65.81272,
+          "samples": 48
+        },
+        "shoulder": {
+          "box": [
+            47,
+            86,
+            160,
+            119
+          ],
+          "width": 113.0,
+          "height": 33.0,
+          "area": 3359.0,
+          "outer_span": 102.0,
+          "central_span": 102.0,
+          "center_x": 102.91456,
+          "center_y": 102.61745,
+          "samples": 33
+        },
+        "chest": {
+          "box": [
+            40,
+            102,
+            167,
+            135
+          ],
+          "width": 127.0,
+          "height": 33.0,
+          "area": 3754.0,
+          "outer_span": 113.0,
+          "central_span": 113.0,
+          "center_x": 102.88732,
+          "center_y": 118.62866,
+          "samples": 33
+        },
+        "belly": {
+          "box": [
+            32,
+            125,
+            168,
+            161
+          ],
+          "width": 136.0,
+          "height": 36.0,
+          "area": 4631.0,
+          "outer_span": 130.0,
+          "central_span": 130.0,
+          "center_x": 102.1924,
+          "center_y": 142.77348,
+          "samples": 36
+        },
+        "lower": {
+          "box": [
+            23,
+            145,
+            168,
+            182
+          ],
+          "width": 145.0,
+          "height": 37.0,
+          "area": 5016.0,
+          "outer_span": 137.0,
+          "central_span": 137.0,
+          "center_x": 97.12061,
+          "center_y": 163.2508,
+          "samples": 37
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 36.0,
+            "area": 659.0,
+            "center_x": 85.0,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 35.0,
+            "area": 647.0,
+            "center_x": 120.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 71.0,
+          "ratio": 1.0285714285714285,
+          "spacing": 35.5,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 36.0,
+          "right_width": 35.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2581.0,
+          "outer_span": 130.0,
+          "root_x": 134.0,
+          "root_y": 142.5,
+          "left": {
+            "area": 1767.0,
+            "outer_span": 21.0,
+            "root_x": 57.0,
+            "root_y": 142.5,
+            "box": [
+              23,
+              102,
+              59,
+              184
+            ]
+          },
+          "right": {
+            "area": 2581.0,
+            "outer_span": 33.0,
+            "root_x": 134.0,
+            "root_y": 142.5,
+            "box": [
+              132,
+              102,
+              168,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.307506,
+          "shoulder_to_head": 1.172414,
+          "chest_to_head": 1.298851,
+          "belly_to_head": 1.494253,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.413793,
+          "right_paw_to_head": 0.402299,
+          "paw_spacing_to_head": 0.408046
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4245.0,
+        "shoulder_width": 102.0,
+        "torso_width": 113.0,
+        "lower_width": 137.0,
+        "outer_lower_width": 137.0
+      },
+      "failures": []
+    },
+    {
+      "frame": "F01",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.1,
+      "metrics": {
+        "blank": false,
+        "box": [
+          22,
+          6,
+          169,
+          204
+        ],
+        "width": 147,
+        "height": 198,
+        "aspect": 0.742424,
+        "area": 20333,
+        "center_x": 95.0,
+        "center_y": 104.5,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          20333
+        ],
+        "head": {
+          "box": [
+            57,
+            18,
+            150,
+            91
+          ],
+          "width": 93.0,
+          "height": 73.0,
+          "area": 6186.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 103.0367,
+          "center_y": 55.30957,
+          "samples": 73
+        },
+        "face": {
+          "box": [
+            57,
+            42,
+            150,
+            89
+          ],
+          "width": 93.0,
+          "height": 47.0,
+          "area": 4146.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 103.09093,
+          "center_y": 65.26773,
+          "samples": 47
+        },
+        "shoulder": {
+          "box": [
+            47,
+            85,
+            160,
+            119
+          ],
+          "width": 113.0,
+          "height": 34.0,
+          "area": 3480.0,
+          "outer_span": 103.0,
+          "central_span": 103.0,
+          "center_x": 102.97241,
+          "center_y": 102.15,
+          "samples": 34
+        },
+        "chest": {
+          "box": [
+            39,
+            101,
+            167,
+            135
+          ],
+          "width": 128.0,
+          "height": 34.0,
+          "area": 3889.0,
+          "outer_span": 113.0,
+          "central_span": 113.0,
+          "center_x": 102.88969,
+          "center_y": 118.16765,
+          "samples": 34
+        },
+        "belly": {
+          "box": [
+            32,
+            125,
+            169,
+            160
+          ],
+          "width": 137.0,
+          "height": 35.0,
+          "area": 4531.0,
+          "outer_span": 130.0,
+          "central_span": 130.0,
+          "center_x": 102.41801,
+          "center_y": 142.24851,
+          "samples": 35
+        },
+        "lower": {
+          "box": [
+            22,
+            145,
+            169,
+            182
+          ],
+          "width": 147.0,
+          "height": 37.0,
+          "area": 5050.0,
+          "outer_span": 138.0,
+          "central_span": 138.0,
+          "center_x": 96.92337,
+          "center_y": 163.24812,
+          "samples": 37
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 35.0,
+            "area": 652.0,
+            "center_x": 85.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 35.0,
+            "area": 646.0,
+            "center_x": 120.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 70.0,
+          "ratio": 1.0,
+          "spacing": 35.0,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 35.0,
+          "right_width": 35.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2637.0,
+          "outer_span": 130.0,
+          "root_x": 134.0,
+          "root_y": 142.0,
+          "left": {
+            "area": 1819.0,
+            "outer_span": 21.0,
+            "root_x": 57.0,
+            "root_y": 142.0,
+            "box": [
+              22,
+              101,
+              59,
+              184
+            ]
+          },
+          "right": {
+            "area": 2637.0,
+            "outer_span": 33.0,
+            "root_x": 134.0,
+            "root_y": 142.0,
+            "box": [
+              132,
+              101,
+              169,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.304234,
+          "shoulder_to_head": 1.183908,
+          "chest_to_head": 1.298851,
+          "belly_to_head": 1.494253,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.402299,
+          "right_paw_to_head": 0.402299,
+          "paw_spacing_to_head": 0.402299
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4146.0,
+        "shoulder_width": 103.0,
+        "torso_width": 113.0,
+        "lower_width": 138.0,
+        "outer_lower_width": 138.0
+      },
+      "failures": []
+    },
+    {
+      "frame": "F02",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.2,
+      "metrics": {
+        "blank": false,
+        "box": [
+          21,
+          6,
+          168,
+          204
+        ],
+        "width": 147,
+        "height": 198,
+        "aspect": 0.742424,
+        "area": 20335,
+        "center_x": 94.0,
+        "center_y": 104.5,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          20335
+        ],
+        "head": {
+          "box": [
+            56,
+            18,
+            150,
+            91
+          ],
+          "width": 94.0,
+          "height": 73.0,
+          "area": 6200.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 102.30081,
+          "center_y": 55.34661,
+          "samples": 73
+        },
+        "face": {
+          "box": [
+            56,
+            42,
+            149,
+            89
+          ],
+          "width": 93.0,
+          "height": 47.0,
+          "area": 4159.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 102.35994,
+          "center_y": 65.27819,
+          "samples": 47
+        },
+        "shoulder": {
+          "box": [
+            46,
+            85,
+            159,
+            119
+          ],
+          "width": 113.0,
+          "height": 34.0,
+          "area": 3476.0,
+          "outer_span": 102.5,
+          "central_span": 102.5,
+          "center_x": 102.35184,
+          "center_y": 102.12371,
+          "samples": 34
+        },
+        "chest": {
+          "box": [
+            39,
+            101,
+            166,
+            135
+          ],
+          "width": 127.0,
+          "height": 34.0,
+          "area": 3865.0,
+          "outer_span": 112.5,
+          "central_span": 112.5,
+          "center_x": 102.24191,
+          "center_y": 118.13687,
+          "samples": 34
+        },
+        "belly": {
+          "box": [
+            32,
+            125,
+            168,
+            160
+          ],
+          "width": 136.0,
+          "height": 35.0,
+          "area": 4496.0,
+          "outer_span": 130.0,
+          "central_span": 130.0,
+          "center_x": 101.74755,
+          "center_y": 142.27135,
+          "samples": 35
+        },
+        "lower": {
+          "box": [
+            21,
+            145,
+            168,
+            182
+          ],
+          "width": 147.0,
+          "height": 37.0,
+          "area": 5043.0,
+          "outer_span": 138.0,
+          "central_span": 138.0,
+          "center_x": 96.18838,
+          "center_y": 163.28693,
+          "samples": 37
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 35.0,
+            "area": 645.0,
+            "center_x": 84.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 36.0,
+            "area": 665.0,
+            "center_x": 120.0,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 71.0,
+          "ratio": 1.0285714285714285,
+          "spacing": 35.5,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 35.0,
+          "right_width": 36.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2643.0,
+          "outer_span": 130.0,
+          "root_x": 133.0,
+          "root_y": 142.0,
+          "left": {
+            "area": 1774.0,
+            "outer_span": 21.0,
+            "root_x": 56.0,
+            "root_y": 142.0,
+            "box": [
+              21,
+              101,
+              58,
+              184
+            ]
+          },
+          "right": {
+            "area": 2643.0,
+            "outer_span": 33.0,
+            "root_x": 133.0,
+            "root_y": 142.0,
+            "box": [
+              131,
+              101,
+              168,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.304893,
+          "shoulder_to_head": 1.178161,
+          "chest_to_head": 1.293103,
+          "belly_to_head": 1.494253,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.402299,
+          "right_paw_to_head": 0.413793,
+          "paw_spacing_to_head": 0.408046
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4159.0,
+        "shoulder_width": 102.5,
+        "torso_width": 112.5,
+        "lower_width": 138.0,
+        "outer_lower_width": 138.0
+      },
+      "failures": []
+    },
+    {
+      "frame": "F03",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.3,
+      "metrics": {
+        "blank": false,
+        "box": [
+          22,
+          5,
+          167,
+          204
+        ],
+        "width": 145,
+        "height": 199,
+        "aspect": 0.728643,
+        "area": 20334,
+        "center_x": 94.0,
+        "center_y": 104.0,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          20334
+        ],
+        "head": {
+          "box": [
+            56,
+            17,
+            150,
+            91
+          ],
+          "width": 94.0,
+          "height": 74.0,
+          "area": 6267.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 102.18877,
+          "center_y": 54.85559,
+          "samples": 74
+        },
+        "face": {
+          "box": [
+            57,
+            41,
+            149,
+            89
+          ],
+          "width": 92.0,
+          "height": 48.0,
+          "area": 4233.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 102.25845,
+          "center_y": 64.7725,
+          "samples": 48
+        },
+        "shoulder": {
+          "box": [
+            47,
+            85,
+            159,
+            118
+          ],
+          "width": 112.0,
+          "height": 33.0,
+          "area": 3347.0,
+          "outer_span": 102.0,
+          "central_span": 102.0,
+          "center_x": 102.40036,
+          "center_y": 101.59546,
+          "samples": 33
+        },
+        "chest": {
+          "box": [
+            40,
+            101,
+            165,
+            134
+          ],
+          "width": 125.0,
+          "height": 33.0,
+          "area": 3720.0,
+          "outer_span": 112.0,
+          "central_span": 112.0,
+          "center_x": 102.37204,
+          "center_y": 117.59274,
+          "samples": 33
+        },
+        "belly": {
+          "box": [
+            33,
+            124,
+            167,
+            160
+          ],
+          "width": 134.0,
+          "height": 36.0,
+          "area": 4573.0,
+          "outer_span": 129.0,
+          "central_span": 129.0,
+          "center_x": 101.83556,
+          "center_y": 141.77805,
+          "samples": 36
+        },
+        "lower": {
+          "box": [
+            22,
+            144,
+            167,
+            182
+          ],
+          "width": 145.0,
+          "height": 38.0,
+          "area": 5125.0,
+          "outer_span": 136.5,
+          "central_span": 136.5,
+          "center_x": 96.55941,
+          "center_y": 162.81541,
+          "samples": 38
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 35.0,
+            "area": 645.0,
+            "center_x": 84.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 35.0,
+            "area": 649.0,
+            "center_x": 119.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 70.0,
+          "ratio": 1.0,
+          "spacing": 35.0,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 35.0,
+          "right_width": 35.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2617.0,
+          "outer_span": 129.0,
+          "root_x": 133.0,
+          "root_y": 142.0,
+          "left": {
+            "area": 1718.0,
+            "outer_span": 20.0,
+            "root_x": 56.0,
+            "root_y": 142.0,
+            "box": [
+              22,
+              101,
+              58,
+              184
+            ]
+          },
+          "right": {
+            "area": 2617.0,
+            "outer_span": 33.0,
+            "root_x": 133.0,
+            "root_y": 142.0,
+            "box": [
+              131,
+              101,
+              167,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.308203,
+          "shoulder_to_head": 1.172414,
+          "chest_to_head": 1.287356,
+          "belly_to_head": 1.482759,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.402299,
+          "right_paw_to_head": 0.402299,
+          "paw_spacing_to_head": 0.402299
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4233.0,
+        "shoulder_width": 102.0,
+        "torso_width": 112.0,
+        "lower_width": 136.5,
+        "outer_lower_width": 136.5
+      },
+      "failures": []
+    },
+    {
+      "frame": "F04",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.42,
+      "metrics": {
+        "blank": false,
+        "box": [
+          24,
+          6,
+          168,
+          204
+        ],
+        "width": 144,
+        "height": 198,
+        "aspect": 0.727273,
+        "area": 19972,
+        "center_x": 95.5,
+        "center_y": 104.5,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          19972
+        ],
+        "head": {
+          "box": [
+            59,
+            18,
+            149,
+            91
+          ],
+          "width": 90.0,
+          "height": 73.0,
+          "area": 6174.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 103.2091,
+          "center_y": 55.18886,
+          "samples": 73
+        },
+        "face": {
+          "box": [
+            59,
+            42,
+            149,
+            89
+          ],
+          "width": 90.0,
+          "height": 47.0,
+          "area": 4141.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 103.298,
+          "center_y": 65.13813,
+          "samples": 47
+        },
+        "shoulder": {
+          "box": [
+            49,
+            85,
+            159,
+            119
+          ],
+          "width": 110.0,
+          "height": 34.0,
+          "area": 3367.0,
+          "outer_span": 99.5,
+          "central_span": 99.5,
+          "center_x": 103.30294,
+          "center_y": 102.15266,
+          "samples": 34
+        },
+        "chest": {
+          "box": [
+            41,
+            101,
+            165,
+            135
+          ],
+          "width": 124.0,
+          "height": 34.0,
+          "area": 3761.0,
+          "outer_span": 109.5,
+          "central_span": 109.5,
+          "center_x": 103.18639,
+          "center_y": 118.15581,
+          "samples": 34
+        },
+        "belly": {
+          "box": [
+            36,
+            125,
+            168,
+            160
+          ],
+          "width": 132.0,
+          "height": 35.0,
+          "area": 4401.0,
+          "outer_span": 128.0,
+          "central_span": 128.0,
+          "center_x": 102.76278,
+          "center_y": 142.27585,
+          "samples": 35
+        },
+        "lower": {
+          "box": [
+            24,
+            145,
+            168,
+            182
+          ],
+          "width": 144.0,
+          "height": 37.0,
+          "area": 4935.0,
+          "outer_span": 135.0,
+          "central_span": 135.0,
+          "center_x": 97.52259,
+          "center_y": 163.28024,
+          "samples": 37
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 35.0,
+            "area": 640.0,
+            "center_x": 85.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 36.0,
+            "area": 659.0,
+            "center_x": 121.0,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 71.0,
+          "ratio": 1.0285714285714285,
+          "spacing": 35.5,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 35.0,
+          "right_width": 36.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2533.0,
+          "outer_span": 128.0,
+          "root_x": 134.0,
+          "root_y": 142.0,
+          "left": {
+            "area": 1724.0,
+            "outer_span": 21.0,
+            "root_x": 58.0,
+            "root_y": 142.0,
+            "box": [
+              24,
+              101,
+              60,
+              184
+            ]
+          },
+          "right": {
+            "area": 2533.0,
+            "outer_span": 32.0,
+            "root_x": 134.0,
+            "root_y": 142.0,
+            "box": [
+              132,
+              101,
+              168,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.309133,
+          "shoulder_to_head": 1.143678,
+          "chest_to_head": 1.258621,
+          "belly_to_head": 1.471264,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.402299,
+          "right_paw_to_head": 0.413793,
+          "paw_spacing_to_head": 0.408046
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4141.0,
+        "shoulder_width": 99.5,
+        "torso_width": 109.5,
+        "lower_width": 135.0,
+        "outer_lower_width": 135.0
+      },
+      "failures": []
+    },
+    {
+      "frame": "F05",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.56,
+      "metrics": {
+        "blank": false,
+        "box": [
+          24,
+          6,
+          168,
+          204
+        ],
+        "width": 144,
+        "height": 198,
+        "aspect": 0.727273,
+        "area": 20068,
+        "center_x": 95.5,
+        "center_y": 104.5,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          20068
+        ],
+        "head": {
+          "box": [
+            58,
+            18,
+            149,
+            91
+          ],
+          "width": 91.0,
+          "height": 73.0,
+          "area": 6154.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 103.03169,
+          "center_y": 55.26324,
+          "samples": 73
+        },
+        "face": {
+          "box": [
+            58,
+            42,
+            149,
+            89
+          ],
+          "width": 91.0,
+          "height": 47.0,
+          "area": 4131.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 103.14839,
+          "center_y": 65.1893,
+          "samples": 47
+        },
+        "shoulder": {
+          "box": [
+            48,
+            85,
+            159,
+            119
+          ],
+          "width": 111.0,
+          "height": 34.0,
+          "area": 3415.0,
+          "outer_span": 101.0,
+          "central_span": 101.0,
+          "center_x": 103.04334,
+          "center_y": 102.16545,
+          "samples": 34
+        },
+        "chest": {
+          "box": [
+            41,
+            101,
+            166,
+            135
+          ],
+          "width": 125.0,
+          "height": 34.0,
+          "area": 3815.0,
+          "outer_span": 111.0,
+          "central_span": 111.0,
+          "center_x": 103.0118,
+          "center_y": 118.14233,
+          "samples": 34
+        },
+        "belly": {
+          "box": [
+            36,
+            125,
+            168,
+            160
+          ],
+          "width": 132.0,
+          "height": 35.0,
+          "area": 4432.0,
+          "outer_span": 128.0,
+          "central_span": 128.0,
+          "center_x": 102.69382,
+          "center_y": 142.24165,
+          "samples": 35
+        },
+        "lower": {
+          "box": [
+            24,
+            145,
+            168,
+            182
+          ],
+          "width": 144.0,
+          "height": 37.0,
+          "area": 4942.0,
+          "outer_span": 135.0,
+          "central_span": 135.0,
+          "center_x": 97.67786,
+          "center_y": 163.26872,
+          "samples": 37
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 35.0,
+            "area": 640.0,
+            "center_x": 85.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 35.0,
+            "area": 654.0,
+            "center_x": 120.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 70.0,
+          "ratio": 1.0,
+          "spacing": 35.0,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 35.0,
+          "right_width": 35.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2567.0,
+          "outer_span": 128.0,
+          "root_x": 134.0,
+          "root_y": 142.0,
+          "left": {
+            "area": 1759.0,
+            "outer_span": 21.0,
+            "root_x": 58.0,
+            "root_y": 142.0,
+            "box": [
+              24,
+              101,
+              60,
+              184
+            ]
+          },
+          "right": {
+            "area": 2567.0,
+            "outer_span": 32.0,
+            "root_x": 134.0,
+            "root_y": 142.0,
+            "box": [
+              132,
+              101,
+              168,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.306657,
+          "shoulder_to_head": 1.16092,
+          "chest_to_head": 1.275862,
+          "belly_to_head": 1.471264,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.402299,
+          "right_paw_to_head": 0.402299,
+          "paw_spacing_to_head": 0.402299
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4131.0,
+        "shoulder_width": 101.0,
+        "torso_width": 111.0,
+        "lower_width": 135.0,
+        "outer_lower_width": 135.0
+      },
+      "failures": []
+    },
+    {
+      "frame": "F06",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.7,
+      "metrics": {
+        "blank": false,
+        "box": [
+          24,
+          3,
+          167,
+          204
+        ],
+        "width": 143,
+        "height": 201,
+        "aspect": 0.711443,
+        "area": 20341,
+        "center_x": 95.0,
+        "center_y": 103.0,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          20341
+        ],
+        "head": {
+          "box": [
+            57,
+            15,
+            149,
+            89
+          ],
+          "width": 92.0,
+          "height": 74.0,
+          "area": 6252.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 102.71993,
+          "center_y": 52.76935,
+          "samples": 74
+        },
+        "face": {
+          "box": [
+            58,
+            39,
+            149,
+            87
+          ],
+          "width": 91.0,
+          "height": 48.0,
+          "area": 4224.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 102.87476,
+          "center_y": 62.68916,
+          "samples": 48
+        },
+        "shoulder": {
+          "box": [
+            48,
+            83,
+            159,
+            118
+          ],
+          "width": 111.0,
+          "height": 35.0,
+          "area": 3519.0,
+          "outer_span": 101.0,
+          "central_span": 101.0,
+          "center_x": 102.91589,
+          "center_y": 100.66468,
+          "samples": 35
+        },
+        "chest": {
+          "box": [
+            41,
+            99,
+            165,
+            134
+          ],
+          "width": 124.0,
+          "height": 35.0,
+          "area": 3907.0,
+          "outer_span": 111.0,
+          "central_span": 111.0,
+          "center_x": 102.91323,
+          "center_y": 116.64781,
+          "samples": 35
+        },
+        "belly": {
+          "box": [
+            37,
+            124,
+            167,
+            160
+          ],
+          "width": 130.0,
+          "height": 36.0,
+          "area": 4525.0,
+          "outer_span": 127.5,
+          "central_span": 127.5,
+          "center_x": 102.53547,
+          "center_y": 141.72884,
+          "samples": 36
+        },
+        "lower": {
+          "box": [
+            24,
+            144,
+            167,
+            182
+          ],
+          "width": 143.0,
+          "height": 38.0,
+          "area": 5029.0,
+          "outer_span": 133.5,
+          "central_span": 133.5,
+          "center_x": 97.54444,
+          "center_y": 162.79419,
+          "samples": 38
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 36.0,
+            "area": 658.0,
+            "center_x": 85.0,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 35.0,
+            "area": 657.0,
+            "center_x": 120.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 71.0,
+          "ratio": 1.0285714285714285,
+          "spacing": 35.5,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 36.0,
+          "right_width": 35.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2664.0,
+          "outer_span": 127.0,
+          "root_x": 133.0,
+          "root_y": 141.0,
+          "left": {
+            "area": 1773.0,
+            "outer_span": 21.0,
+            "root_x": 58.0,
+            "root_y": 141.0,
+            "box": [
+              24,
+              99,
+              60,
+              184
+            ]
+          },
+          "right": {
+            "area": 2664.0,
+            "outer_span": 32.0,
+            "root_x": 133.0,
+            "root_y": 141.0,
+            "box": [
+              131,
+              99,
+              167,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.30736,
+          "shoulder_to_head": 1.16092,
+          "chest_to_head": 1.275862,
+          "belly_to_head": 1.465517,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.413793,
+          "right_paw_to_head": 0.402299,
+          "paw_spacing_to_head": 0.408046
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4224.0,
+        "shoulder_width": 101.0,
+        "torso_width": 111.0,
+        "lower_width": 133.5,
+        "outer_lower_width": 133.5
+      },
+      "failures": []
+    },
+    {
+      "frame": "F07",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 0.85,
+      "metrics": {
+        "blank": false,
+        "box": [
+          21,
+          3,
+          164,
+          204
+        ],
+        "width": 143,
+        "height": 201,
+        "aspect": 0.711443,
+        "area": 20226,
+        "center_x": 92.0,
+        "center_y": 103.0,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          20226
+        ],
+        "head": {
+          "box": [
+            57,
+            15,
+            150,
+            89
+          ],
+          "width": 93.0,
+          "height": 74.0,
+          "area": 6261.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 102.35713,
+          "center_y": 52.77144,
+          "samples": 74
+        },
+        "face": {
+          "box": [
+            57,
+            39,
+            149,
+            87
+          ],
+          "width": 92.0,
+          "height": 48.0,
+          "area": 4222.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 102.45713,
+          "center_y": 62.74088,
+          "samples": 48
+        },
+        "shoulder": {
+          "box": [
+            48,
+            83,
+            159,
+            118
+          ],
+          "width": 111.0,
+          "height": 35.0,
+          "area": 3535.0,
+          "outer_span": 102.0,
+          "central_span": 102.0,
+          "center_x": 102.72306,
+          "center_y": 100.61612,
+          "samples": 35
+        },
+        "chest": {
+          "box": [
+            42,
+            99,
+            163,
+            134
+          ],
+          "width": 121.0,
+          "height": 35.0,
+          "area": 3872.0,
+          "outer_span": 110.0,
+          "central_span": 110.0,
+          "center_x": 102.78254,
+          "center_y": 116.53099,
+          "samples": 35
+        },
+        "belly": {
+          "box": [
+            33,
+            124,
+            164,
+            160
+          ],
+          "width": 131.0,
+          "height": 36.0,
+          "area": 4391.0,
+          "outer_span": 123.0,
+          "central_span": 123.0,
+          "center_x": 101.82464,
+          "center_y": 141.7192,
+          "samples": 36
+        },
+        "lower": {
+          "box": [
+            21,
+            144,
+            164,
+            182
+          ],
+          "width": 143.0,
+          "height": 38.0,
+          "area": 4961.0,
+          "outer_span": 133.0,
+          "central_span": 133.0,
+          "center_x": 95.27757,
+          "center_y": 162.95948,
+          "samples": 38
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 35.0,
+            "area": 636.0,
+            "center_x": 84.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 36.0,
+            "area": 654.0,
+            "center_x": 120.0,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 71.0,
+          "ratio": 1.0285714285714285,
+          "spacing": 35.5,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 35.0,
+          "right_width": 36.0
+        },
+        "tail": {
+          "side": "right",
+          "area": 2748.0,
+          "outer_span": 123.0,
+          "root_x": 130.0,
+          "root_y": 141.0,
+          "left": {
+            "area": 1544.0,
+            "outer_span": 16.0,
+            "root_x": 55.0,
+            "root_y": 141.0,
+            "box": [
+              21,
+              99,
+              57,
+              184
+            ]
+          },
+          "right": {
+            "area": 2748.0,
+            "outer_span": 33.0,
+            "root_x": 130.0,
+            "root_y": 141.0,
+            "box": [
+              128,
+              99,
+              164,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.309552,
+          "shoulder_to_head": 1.172414,
+          "chest_to_head": 1.264368,
+          "belly_to_head": 1.413793,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.402299,
+          "right_paw_to_head": 0.413793,
+          "paw_spacing_to_head": 0.408046
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4222.0,
+        "shoulder_width": 102.0,
+        "torso_width": 110.0,
+        "lower_width": 133.0,
+        "outer_lower_width": 133.0
+      },
+      "failures": []
+    },
+    {
+      "frame": "F08",
+      "mode": "transition",
+      "anchor_pair": "C_H",
+      "t": 1.0,
+      "metrics": {
+        "blank": false,
+        "box": [
+          23,
+          4,
+          163,
+          204
+        ],
+        "width": 140,
+        "height": 200,
+        "aspect": 0.7,
+        "area": 19873,
+        "center_x": 92.5,
+        "center_y": 103.5,
+        "baseline": 204,
+        "edge_touch": false,
+        "component_count": 1,
+        "components": [
+          19873
+        ],
+        "head": {
+          "box": [
+            57,
+            16,
+            150,
+            90
+          ],
+          "width": 93.0,
+          "height": 74.0,
+          "area": 6288.0,
+          "outer_span": 87.0,
+          "central_span": 87.0,
+          "center_x": 102.63772,
+          "center_y": 53.69323,
+          "samples": 74
+        },
+        "face": {
+          "box": [
+            57,
+            40,
+            149,
+            88
+          ],
+          "width": 92.0,
+          "height": 48.0,
+          "area": 4234.0,
+          "outer_span": 88.0,
+          "central_span": 88.0,
+          "center_x": 102.77161,
+          "center_y": 63.64242,
+          "samples": 48
+        },
+        "shoulder": {
+          "box": [
+            49,
+            84,
+            158,
+            118
+          ],
+          "width": 109.0,
+          "height": 34.0,
+          "area": 3406.0,
+          "outer_span": 101.0,
+          "central_span": 101.0,
+          "center_x": 103.00499,
+          "center_y": 101.07281,
+          "samples": 34
+        },
+        "chest": {
+          "box": [
+            44,
+            100,
+            162,
+            134
+          ],
+          "width": 118.0,
+          "height": 34.0,
+          "area": 3722.0,
+          "outer_span": 109.0,
+          "central_span": 109.0,
+          "center_x": 102.96292,
+          "center_y": 116.98549,
+          "samples": 34
+        },
+        "belly": {
+          "box": [
+            33,
+            124,
+            163,
+            160
+          ],
+          "width": 130.0,
+          "height": 36.0,
+          "area": 4328.0,
+          "outer_span": 121.0,
+          "central_span": 121.0,
+          "center_x": 101.80314,
+          "center_y": 141.74307,
+          "samples": 36
+        },
+        "lower": {
+          "box": [
+            23,
+            144,
+            163,
+            182
+          ],
+          "width": 140.0,
+          "height": 38.0,
+          "area": 4885.0,
+          "outer_span": 131.0,
+          "central_span": 131.0,
+          "center_x": 95.30092,
+          "center_y": 162.92385,
+          "samples": 38
+        },
+        "legs": {
+          "left": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "right": {
+            "width": null,
+            "area": null,
+            "center_x": null,
+            "center_y": null,
+            "top": null,
+            "bottom": null,
+            "samples": 0
+          },
+          "combined": null,
+          "ratio": null,
+          "spacing": null,
+          "samples": 0,
+          "coverage": 0.0,
+          "reliable": false,
+          "left_width": null,
+          "right_width": null
+        },
+        "paws": {
+          "left": {
+            "width": 35.0,
+            "area": 633.0,
+            "center_x": 85.0,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "right": {
+            "width": 34.5,
+            "area": 630.0,
+            "center_x": 120.5,
+            "center_y": 193.5,
+            "top": 184,
+            "bottom": 204,
+            "samples": 20
+          },
+          "combined": 69.5,
+          "ratio": 1.0144927536231885,
+          "spacing": 35.5,
+          "samples": 20,
+          "coverage": 1.0,
+          "reliable": true,
+          "left_width": 35.0,
+          "right_width": 34.5
+        },
+        "tail": {
+          "side": "right",
+          "area": 2655.0,
+          "outer_span": 121.0,
+          "root_x": 130.0,
+          "root_y": 141.5,
+          "left": {
+            "area": 1539.0,
+            "outer_span": 16.0,
+            "root_x": 56.0,
+            "root_y": 141.5,
+            "box": [
+              23,
+              100,
+              58,
+              184
+            ]
+          },
+          "right": {
+            "area": 2655.0,
+            "outer_span": 32.0,
+            "root_x": 130.0,
+            "root_y": 141.5,
+            "box": [
+              128,
+              100,
+              163,
+              184
+            ]
+          }
+        },
+        "ratios": {
+          "head_to_body_area": 0.316409,
+          "shoulder_to_head": 1.16092,
+          "chest_to_head": 1.252874,
+          "belly_to_head": 1.390805,
+          "left_leg_to_head": null,
+          "right_leg_to_head": null,
+          "left_paw_to_head": 0.402299,
+          "right_paw_to_head": 0.396552,
+          "paw_spacing_to_head": 0.408046
+        },
+        "face_width": 88.0,
+        "face_area_proxy": 4234.0,
+        "shoulder_width": 101.0,
+        "torso_width": 109.0,
+        "lower_width": 131.0,
+        "outer_lower_width": 131.0
+      },
+      "failures": []
+    }
+  ],
+  "temporal": [
+    {
+      "from": "F00",
+      "to": "F01",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.013793,
+        "height": 0.005076,
+        "area": 0.006036,
+        "aspect": 0.006383,
+        "center_x": 0.0,
+        "head.width": 0.0,
+        "head.height": 0.0,
+        "head.area": 0.004666,
+        "head.center_x": 0.39165,
+        "head.center_y": 0.98681,
+        "shoulder.outer_span": 0.009804,
+        "shoulder.area": 0.036023,
+        "chest.outer_span": 0.0,
+        "chest.area": 0.035962,
+        "belly.outer_span": 0.0,
+        "belly.area": 0.021594,
+        "paws.left.width": 0.027778,
+        "paws.right.width": 0.0,
+        "paws.left.area": 0.010622,
+        "paws.right.area": 0.001546,
+        "paws.spacing": 0.5,
+        "tail.area": 0.021697,
+        "tail.outer_span": 0.0,
+        "tail.root_x": 0.0,
+        "tail.root_y": 0.5,
+        "tail.left.area": 0.029428,
+        "tail.left.root_x": 0.0,
+        "tail.left.root_y": 0.5,
+        "tail.right.area": 0.021697,
+        "tail.right.root_x": 0.0,
+        "tail.right.root_y": 0.5
+      },
+      "failures": []
+    },
+    {
+      "from": "F01",
+      "to": "F02",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.0,
+        "height": 0.0,
+        "area": 9.8e-05,
+        "aspect": 0.0,
+        "center_x": 1.0,
+        "head.width": 0.010753,
+        "head.height": 0.0,
+        "head.area": 0.002263,
+        "head.center_x": 0.73589,
+        "head.center_y": 0.03704,
+        "shoulder.outer_span": 0.004854,
+        "shoulder.area": 0.001149,
+        "chest.outer_span": 0.004425,
+        "chest.area": 0.006171,
+        "belly.outer_span": 0.0,
+        "belly.area": 0.007725,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.028571,
+        "paws.left.area": 0.010736,
+        "paws.right.area": 0.029412,
+        "paws.spacing": 0.5,
+        "tail.area": 0.002275,
+        "tail.outer_span": 0.0,
+        "tail.root_x": 1.0,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.024739,
+        "tail.left.root_x": 1.0,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.002275,
+        "tail.right.root_x": 1.0,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "from": "F02",
+      "to": "F03",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.013605,
+        "height": 0.005051,
+        "area": 4.9e-05,
+        "aspect": 0.013781,
+        "center_x": 0.0,
+        "head.width": 0.0,
+        "head.height": 0.013699,
+        "head.area": 0.010806,
+        "head.center_x": 0.11204,
+        "head.center_y": 0.49102,
+        "shoulder.outer_span": 0.004878,
+        "shoulder.area": 0.037112,
+        "chest.outer_span": 0.004444,
+        "chest.area": 0.037516,
+        "belly.outer_span": 0.007692,
+        "belly.area": 0.017126,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.027778,
+        "paws.left.area": 0.0,
+        "paws.right.area": 0.02406,
+        "paws.spacing": 0.5,
+        "tail.area": 0.009837,
+        "tail.outer_span": 0.007692,
+        "tail.root_x": 0.0,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.031567,
+        "tail.left.root_x": 0.0,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.009837,
+        "tail.right.root_x": 0.0,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "from": "F03",
+      "to": "F04",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.006897,
+        "height": 0.005025,
+        "area": 0.017803,
+        "aspect": 0.00137,
+        "center_x": 1.5,
+        "head.width": 0.042553,
+        "head.height": 0.013514,
+        "head.area": 0.01484,
+        "head.center_x": 1.02033,
+        "head.center_y": 0.33327,
+        "shoulder.outer_span": 0.02451,
+        "shoulder.area": 0.005976,
+        "chest.outer_span": 0.022321,
+        "chest.area": 0.011022,
+        "belly.outer_span": 0.007752,
+        "belly.area": 0.037612,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.028571,
+        "paws.left.area": 0.007752,
+        "paws.right.area": 0.015408,
+        "paws.spacing": 0.5,
+        "tail.area": 0.032098,
+        "tail.outer_span": 0.007752,
+        "tail.root_x": 1.0,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.003492,
+        "tail.left.root_x": 2.0,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.032098,
+        "tail.right.root_x": 1.0,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "from": "F04",
+      "to": "F05",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.0,
+        "height": 0.0,
+        "area": 0.004807,
+        "aspect": 0.0,
+        "center_x": 0.0,
+        "head.width": 0.011111,
+        "head.height": 0.0,
+        "head.area": 0.003239,
+        "head.center_x": 0.17741,
+        "head.center_y": 0.07438,
+        "shoulder.outer_span": 0.015075,
+        "shoulder.area": 0.014256,
+        "chest.outer_span": 0.013699,
+        "chest.area": 0.014358,
+        "belly.outer_span": 0.0,
+        "belly.area": 0.007044,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.027778,
+        "paws.left.area": 0.0,
+        "paws.right.area": 0.007587,
+        "paws.spacing": 0.5,
+        "tail.area": 0.013423,
+        "tail.outer_span": 0.0,
+        "tail.root_x": 0.0,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.020302,
+        "tail.left.root_x": 0.0,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.013423,
+        "tail.right.root_x": 0.0,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "from": "F05",
+      "to": "F06",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.006944,
+        "height": 0.015152,
+        "area": 0.013604,
+        "aspect": 0.01583,
+        "center_x": 0.5,
+        "head.width": 0.010989,
+        "head.height": 0.013699,
+        "head.area": 0.015925,
+        "head.center_x": 0.31176,
+        "head.center_y": 2.49389,
+        "shoulder.outer_span": 0.0,
+        "shoulder.area": 0.030454,
+        "chest.outer_span": 0.0,
+        "chest.area": 0.024115,
+        "belly.outer_span": 0.003906,
+        "belly.area": 0.020984,
+        "paws.left.width": 0.028571,
+        "paws.right.width": 0.0,
+        "paws.left.area": 0.028125,
+        "paws.right.area": 0.004587,
+        "paws.spacing": 0.5,
+        "tail.area": 0.037787,
+        "tail.outer_span": 0.007812,
+        "tail.root_x": 1.0,
+        "tail.root_y": 1.0,
+        "tail.left.area": 0.007959,
+        "tail.left.root_x": 0.0,
+        "tail.left.root_y": 1.0,
+        "tail.right.area": 0.037787,
+        "tail.right.root_x": 1.0,
+        "tail.right.root_y": 1.0
+      },
+      "failures": []
+    },
+    {
+      "from": "F06",
+      "to": "F07",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.0,
+        "height": 0.0,
+        "area": 0.005654,
+        "aspect": 0.0,
+        "center_x": 3.0,
+        "head.width": 0.01087,
+        "head.height": 0.0,
+        "head.area": 0.00144,
+        "head.center_x": 0.3628,
+        "head.center_y": 0.00209,
+        "shoulder.outer_span": 0.009901,
+        "shoulder.area": 0.004547,
+        "chest.outer_span": 0.009009,
+        "chest.area": 0.008958,
+        "belly.outer_span": 0.035294,
+        "belly.area": 0.029613,
+        "paws.left.width": 0.027778,
+        "paws.right.width": 0.028571,
+        "paws.left.area": 0.033435,
+        "paws.right.area": 0.004566,
+        "paws.spacing": 0.0,
+        "tail.area": 0.031532,
+        "tail.outer_span": 0.031496,
+        "tail.root_x": 3.0,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.12916,
+        "tail.left.root_x": 3.0,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.031532,
+        "tail.right.root_x": 3.0,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "from": "F07",
+      "to": "F08",
+      "cross_phase": false,
+      "changes": {
+        "width": 0.020979,
+        "height": 0.004975,
+        "area": 0.017453,
+        "aspect": 0.011443,
+        "center_x": 0.5,
+        "head.width": 0.0,
+        "head.height": 0.0,
+        "head.area": 0.004312,
+        "head.center_x": 0.28059,
+        "head.center_y": 0.92179,
+        "shoulder.outer_span": 0.009804,
+        "shoulder.area": 0.036492,
+        "chest.outer_span": 0.009091,
+        "chest.area": 0.03874,
+        "belly.outer_span": 0.01626,
+        "belly.area": 0.014348,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.041667,
+        "paws.left.area": 0.004717,
+        "paws.right.area": 0.036697,
+        "paws.spacing": 0.0,
+        "tail.area": 0.033843,
+        "tail.outer_span": 0.01626,
+        "tail.root_x": 0.0,
+        "tail.root_y": 0.5,
+        "tail.left.area": 0.003238,
+        "tail.left.root_x": 1.0,
+        "tail.left.root_y": 0.5,
+        "tail.right.area": 0.033843,
+        "tail.right.root_x": 0.0,
+        "tail.right.root_y": 0.5
+      },
+      "failures": []
+    }
+  ],
+  "three_frame_trends": [
+    {
+      "before": "F00",
+      "frame": "F01",
+      "after": "F02",
+      "context": {
+        "mode": "transition",
+        "anchor_pair": "C_H"
+      },
+      "residuals": {
+        "width": 0.006849,
+        "height": 0.002532,
+        "area": 0.00296,
+        "aspect": 0.003192,
+        "center_x": 0.5,
+        "head.width": 0.005348,
+        "head.height": 0.0,
+        "head.area": 0.003464,
+        "head.center_x": 0.56377,
+        "head.center_y": 0.511925,
+        "shoulder.outer_span": 0.007335,
+        "shoulder.area": 0.018288,
+        "chest.outer_span": 0.002217,
+        "chest.area": 0.020869,
+        "belly.outer_span": 0.0,
+        "belly.area": 0.007122,
+        "paws.left.width": 0.014085,
+        "paws.right.width": 0.014085,
+        "paws.left.area": 0.0,
+        "paws.right.area": 0.015244,
+        "paws.spacing": 0.5,
+        "tail.area": 0.009571,
+        "tail.outer_span": 0.0,
+        "tail.root_x": 0.5,
+        "tail.root_y": 0.25,
+        "tail.left.area": 0.027393,
+        "tail.left.root_x": 0.5,
+        "tail.left.root_y": 0.25,
+        "tail.right.area": 0.009571,
+        "tail.right.root_x": 0.5,
+        "tail.right.root_y": 0.25
+      },
+      "failures": []
+    },
+    {
+      "before": "F01",
+      "frame": "F02",
+      "after": "F03",
+      "context": {
+        "mode": "transition",
+        "anchor_pair": "C_H"
+      },
+      "residuals": {
+        "width": 0.006849,
+        "height": 0.002519,
+        "area": 7.4e-05,
+        "aspect": 0.00689,
+        "center_x": 0.5,
+        "head.width": 0.005348,
+        "head.height": 0.006803,
+        "head.area": 0.004256,
+        "head.center_x": 0.311925,
+        "head.center_y": 0.26403,
+        "shoulder.outer_span": 0.0,
+        "shoulder.area": 0.01831,
+        "chest.outer_span": 0.0,
+        "chest.area": 0.015902,
+        "belly.outer_span": 0.003861,
+        "belly.area": 0.012302,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.028571,
+        "paws.left.area": 0.005397,
+        "paws.right.area": 0.027027,
+        "paws.spacing": 0.5,
+        "tail.area": 0.006091,
+        "tail.outer_span": 0.003861,
+        "tail.root_x": 0.5,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.00311,
+        "tail.left.root_x": 0.5,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.006091,
+        "tail.right.root_x": 0.5,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "before": "F02",
+      "frame": "F03",
+      "after": "F04",
+      "context": {
+        "mode": "transition",
+        "anchor_pair": "C_H"
+      },
+      "residuals": {
+        "width": 0.003436,
+        "height": 0.005051,
+        "area": 0.008956,
+        "aspect": 0.006205,
+        "center_x": 0.75,
+        "head.width": 0.021739,
+        "head.height": 0.013699,
+        "head.area": 0.01293,
+        "head.center_x": 0.566185,
+        "head.center_y": 0.412145,
+        "shoulder.outer_span": 0.009901,
+        "shoulder.area": 0.021774,
+        "chest.outer_span": 0.009009,
+        "chest.area": 0.02439,
+        "belly.outer_span": 0.0,
+        "belly.area": 0.027987,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.027778,
+        "paws.left.area": 0.003891,
+        "paws.right.area": 0.019637,
+        "paws.spacing": 0.5,
+        "tail.area": 0.011206,
+        "tail.outer_span": 0.0,
+        "tail.root_x": 0.5,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.017724,
+        "tail.left.root_x": 1.0,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.011206,
+        "tail.right.root_x": 0.5,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "before": "F03",
+      "frame": "F04",
+      "after": "F05",
+      "context": {
+        "mode": "transition",
+        "anchor_pair": "C_H"
+      },
+      "residuals": {
+        "width": 0.00346,
+        "height": 0.002519,
+        "area": 0.011336,
+        "aspect": 0.000685,
+        "center_x": 0.75,
+        "head.width": 0.027027,
+        "head.height": 0.006803,
+        "head.area": 0.005877,
+        "head.center_x": 0.59887,
+        "head.center_y": 0.129445,
+        "shoulder.outer_span": 0.019704,
+        "shoulder.area": 0.004141,
+        "chest.outer_span": 0.017937,
+        "chest.area": 0.001725,
+        "belly.outer_span": 0.003891,
+        "belly.area": 0.022543,
+        "paws.left.width": 0.0,
+        "paws.right.width": 0.028571,
+        "paws.left.area": 0.003891,
+        "paws.right.area": 0.011512,
+        "paws.spacing": 0.5,
+        "tail.area": 0.022762,
+        "tail.outer_span": 0.003891,
+        "tail.root_x": 0.5,
+        "tail.root_y": 0.0,
+        "tail.left.area": 0.008341,
+        "tail.left.root_x": 1.0,
+        "tail.left.root_y": 0.0,
+        "tail.right.area": 0.022762,
+        "tail.right.root_x": 0.5,
+        "tail.right.root_y": 0.0
+      },
+      "failures": []
+    },
+    {
+      "before": "F04",
+      "frame": "F05",
+      "after": "F06",
+      "context": {
+        "mode": "transition",
+        "anchor_pair": "C_H"
+      },
+      "residuals": {
+        "width": 0.003484,
+        "height": 0.007519,
+        "area": 0.004391,
+        "aspect": 0.007915,
+        "center_x": 0.25,
+        "head.width": 0.0,
+        "head.height": 0.006803,
+        "head.area": 0.009496,
+        "head.center_x": 0.067175,
+        "head.center_y": 1.284135,
+        "shoulder.outer_span": 0.007481,
+        "shoulder.area": 0.008132,
+        "chest.outer_span": 0.006803,
+        "chest.area": 0.004956,
+        "belly.outer_span": 0.001957,
+        "belly.area": 0.006946,
+        "paws.left.width": 0.014085,
+        "paws.right.width": 0.014085,
+        "paws.left.area": 0.013867,
+        "paws.right.area": 0.006079,
+        "paws.spacing": 0.5,
+        "tail.area": 0.012122,
+        "tail.outer_span": 0.003922,
+        "tail.root_x": 0.5,
+        "tail.root_y": 0.5,
+        "tail.left.area": 0.006005,
+        "tail.left.root_x": 0.0,
+        "tail.left.root_y": 0.5,
+        "tail.right.area": 0.012122,
+        "tail.right.root_x": 0.5,
+        "tail.right.root_y": 0.5
+      },
+      "failures": []
+    },
+    {
+      "before": "F05",
+      "frame": "F06",
+      "after": "F07",
+      "context": {
+        "mode": "transition",
+        "anchor_pair": "C_H"
+      },
+      "residuals": {
+        "width": 0.003484,
+        "height": 0.007519,
+        "area": 0.009629,
+        "aspect": 0.007915,
+        "center_x": 1.25,
+        "head.width": 0.0,
+        "head.height": 0.006803,
+        "head.area": 0.007169,
+        "head.center_x": 0.02552,
+        "head.center_y": 1.24799,
+        "shoulder.outer_span": 0.004926,
+        "shoulder.area": 0.012662,
+        "chest.outer_span": 0.004525,
+        "chest.area": 0.016521,
+        "belly.outer_span": 0.015936,
+        "belly.area": 0.025728,
+        "paws.left.width": 0.028571,
+        "paws.right.width": 0.014085,
+        "paws.left.area": 0.031348,
+        "paws.right.area": 0.004587,
+        "paws.spacing": 0.25,
+        "tail.area": 0.002446,
+        "tail.outer_span": 0.011952,
+        "tail.root_x": 1.0,
+        "tail.root_y": 0.5,
+        "tail.left.area": 0.073569,
+        "tail.left.root_x": 1.5,
+        "tail.left.root_y": 0.5,
+        "tail.right.area": 0.002446,
+        "tail.right.root_x": 1.0,
+        "tail.right.root_y": 0.5
+      },
+      "failures": []
+    },
+    {
+      "before": "F06",
+      "frame": "F07",
+      "after": "F08",
+      "context": {
+        "mode": "transition",
+        "anchor_pair": "C_H"
+      },
+      "residuals": {
+        "width": 0.010601,
+        "height": 0.002494,
+        "area": 0.005918,
+        "aspect": 0.005722,
+        "center_x": 1.75,
+        "head.width": 0.005405,
+        "head.height": 0.0,
+        "head.area": 0.001435,
+        "head.center_x": 0.321695,
+        "head.center_y": 0.45985,
+        "shoulder.outer_span": 0.009901,
+        "shoulder.area": 0.020939,
+        "chest.outer_span": 0.0,
+        "chest.area": 0.015074,
+        "belly.outer_span": 0.01006,
+        "belly.area": 0.00802,
+        "paws.left.width": 0.014085,
+        "paws.right.width": 0.035971,
+        "paws.left.area": 0.014717,
+        "paws.right.area": 0.016317,
+        "paws.spacing": 0.0,
+        "tail.area": 0.033277,
+        "tail.outer_span": 0.008065,
+        "tail.root_x": 1.5,
+        "tail.root_y": 0.25,
+        "tail.left.area": 0.067633,
+        "tail.left.root_x": 2.0,
+        "tail.left.root_y": 0.25,
+        "tail.right.area": 0.033277,
+        "tail.right.root_x": 1.5,
+        "tail.right.root_y": 0.25
+      },
+      "failures": []
+    }
+  ],
+  "anchor_progression": [
+    {
+      "from": "F00",
+      "to": "F01",
+      "anchor_pair": "C_H",
+      "t": [
+        0.0,
+        0.1
+      ],
+      "distances": {
+        "width": {
+          "before": 5.0,
+          "after": 7.0,
+          "regression": 2.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 3.0,
+          "after": 2.0,
+          "regression": -1.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 338.0,
+          "after": 460.0,
+          "regression": 122.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 1.0,
+          "after": 1.0,
+          "regression": 0.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 73.0,
+          "after": 102.0,
+          "regression": 29.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 1.0,
+          "after": 2.0,
+          "regression": 1.0,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 4.0,
+          "after": 4.0,
+          "regression": 0.0,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 9.0,
+          "after": 9.0,
+          "regression": 0.0,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 0.5,
+          "after": 0.5,
+          "regression": 0.0,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 26.0,
+          "after": 19.0,
+          "regression": -7.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 17.0,
+          "after": 16.0,
+          "regression": -1.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.0,
+          "after": 0.5,
+          "regression": 0.5,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 9.0,
+          "after": 9.0,
+          "regression": 0.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 228.0,
+          "after": 280.0,
+          "regression": 52.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 74.0,
+          "after": 18.0,
+          "regression": -56.0,
+          "noise": 106.2
+        }
+      },
+      "failures": []
+    },
+    {
+      "from": "F01",
+      "to": "F02",
+      "anchor_pair": "C_H",
+      "t": [
+        0.1,
+        0.2
+      ],
+      "distances": {
+        "width": {
+          "before": 7.0,
+          "after": 7.0,
+          "regression": 0.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 2.0,
+          "after": 2.0,
+          "regression": 0.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 460.0,
+          "after": 462.0,
+          "regression": 2.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 0.0,
+          "after": 1.0,
+          "regression": 1.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 1.0,
+          "after": 1.0,
+          "regression": 0.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 102.0,
+          "after": 88.0,
+          "regression": -14.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 2.0,
+          "after": 1.5,
+          "regression": -0.5,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 4.0,
+          "after": 3.5,
+          "regression": -0.5,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 9.0,
+          "after": 9.0,
+          "regression": 0.0,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 0.5,
+          "after": 1.5,
+          "regression": 1.0,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 19.0,
+          "after": 12.0,
+          "regression": -7.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 16.0,
+          "after": 35.0,
+          "regression": 19.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.5,
+          "after": 0.0,
+          "regression": -0.5,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 9.0,
+          "after": 9.0,
+          "regression": 0.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 280.0,
+          "after": 235.0,
+          "regression": -45.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 18.0,
+          "after": 12.0,
+          "regression": -6.0,
+          "noise": 106.2
+        }
+      },
+      "failures": []
+    },
+    {
+      "from": "F02",
+      "to": "F03",
+      "anchor_pair": "C_H",
+      "t": [
+        0.2,
+        0.3
+      ],
+      "distances": {
+        "width": {
+          "before": 7.0,
+          "after": 5.0,
+          "regression": -2.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 2.0,
+          "after": 1.0,
+          "regression": -1.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 462.0,
+          "after": 461.0,
+          "regression": -1.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 1.0,
+          "after": 1.0,
+          "regression": 0.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 88.0,
+          "after": 21.0,
+          "regression": -67.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 1.5,
+          "after": 1.0,
+          "regression": -0.5,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 3.5,
+          "after": 3.0,
+          "regression": -0.5,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 9.0,
+          "after": 8.0,
+          "regression": -1.0,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 1.5,
+          "after": 0.5,
+          "regression": -1.0,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 12.0,
+          "after": 12.0,
+          "regression": 0.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 35.0,
+          "after": 19.0,
+          "regression": -16.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.0,
+          "after": 0.5,
+          "regression": 0.5,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 9.0,
+          "after": 8.0,
+          "regression": -1.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 235.0,
+          "after": 179.0,
+          "regression": -56.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 12.0,
+          "after": 38.0,
+          "regression": 26.0,
+          "noise": 106.2
+        }
+      },
+      "failures": []
+    },
+    {
+      "from": "F03",
+      "to": "F04",
+      "anchor_pair": "C_H",
+      "t": [
+        0.3,
+        0.42
+      ],
+      "distances": {
+        "width": {
+          "before": 5.0,
+          "after": 4.0,
+          "regression": -1.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 1.0,
+          "after": 2.0,
+          "regression": 1.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 461.0,
+          "after": 99.0,
+          "regression": -362.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 1.0,
+          "after": 3.0,
+          "regression": 2.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 0.0,
+          "after": 1.0,
+          "regression": 1.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 21.0,
+          "after": 114.0,
+          "regression": 93.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 1.0,
+          "after": 1.5,
+          "regression": 0.5,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 3.0,
+          "after": 0.5,
+          "regression": -2.5,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 8.0,
+          "after": 7.0,
+          "regression": -1.0,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 0.5,
+          "after": 1.5,
+          "regression": 1.0,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 12.0,
+          "after": 7.0,
+          "regression": -5.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 19.0,
+          "after": 29.0,
+          "regression": 10.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.5,
+          "after": 0.0,
+          "regression": -0.5,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 8.0,
+          "after": 7.0,
+          "regression": -1.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 179.0,
+          "after": 185.0,
+          "regression": 6.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 38.0,
+          "after": 122.0,
+          "regression": 84.0,
+          "noise": 106.2
+        }
+      },
+      "failures": [
+        "tail.right.area_persistently_moves_away=110.000; steps=2; noise=106.200; endpoint=2655.000"
+      ]
+    },
+    {
+      "from": "F04",
+      "to": "F05",
+      "anchor_pair": "C_H",
+      "t": [
+        0.42,
+        0.56
+      ],
+      "distances": {
+        "width": {
+          "before": 4.0,
+          "after": 4.0,
+          "regression": 0.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 2.0,
+          "after": 2.0,
+          "regression": 0.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 99.0,
+          "after": 195.0,
+          "regression": 96.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 3.0,
+          "after": 2.0,
+          "regression": -1.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 1.0,
+          "after": 1.0,
+          "regression": 0.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 114.0,
+          "after": 134.0,
+          "regression": 20.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 1.5,
+          "after": 0.0,
+          "regression": -1.5,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 0.5,
+          "after": 2.0,
+          "regression": 1.5,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 7.0,
+          "after": 7.0,
+          "regression": 0.0,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 1.5,
+          "after": 0.5,
+          "regression": -1.0,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 7.0,
+          "after": 7.0,
+          "regression": 0.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 29.0,
+          "after": 24.0,
+          "regression": -5.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.0,
+          "after": 0.5,
+          "regression": 0.5,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 7.0,
+          "after": 7.0,
+          "regression": 0.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 185.0,
+          "after": 220.0,
+          "regression": 35.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 122.0,
+          "after": 88.0,
+          "regression": -34.0,
+          "noise": 106.2
+        }
+      },
+      "failures": []
+    },
+    {
+      "from": "F05",
+      "to": "F06",
+      "anchor_pair": "C_H",
+      "t": [
+        0.56,
+        0.7
+      ],
+      "distances": {
+        "width": {
+          "before": 4.0,
+          "after": 3.0,
+          "regression": -1.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 2.0,
+          "after": 1.0,
+          "regression": -1.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 195.0,
+          "after": 468.0,
+          "regression": 273.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 2.0,
+          "after": 1.0,
+          "regression": -1.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 134.0,
+          "after": 36.0,
+          "regression": -98.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 2.0,
+          "after": 2.0,
+          "regression": 0.0,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 7.0,
+          "after": 6.5,
+          "regression": -0.5,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 0.0,
+          "after": 1.0,
+          "regression": 1.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 0.5,
+          "after": 0.5,
+          "regression": 0.0,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 7.0,
+          "after": 25.0,
+          "regression": 18.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 24.0,
+          "after": 27.0,
+          "regression": 3.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.5,
+          "after": 0.0,
+          "regression": -0.5,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 7.0,
+          "after": 6.0,
+          "regression": -1.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 220.0,
+          "after": 234.0,
+          "regression": 14.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 88.0,
+          "after": 9.0,
+          "regression": -79.0,
+          "noise": 106.2
+        }
+      },
+      "failures": []
+    },
+    {
+      "from": "F06",
+      "to": "F07",
+      "anchor_pair": "C_H",
+      "t": [
+        0.7,
+        0.85
+      ],
+      "distances": {
+        "width": {
+          "before": 3.0,
+          "after": 3.0,
+          "regression": 0.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 1.0,
+          "after": 1.0,
+          "regression": 0.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 468.0,
+          "after": 353.0,
+          "regression": -115.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 36.0,
+          "after": 27.0,
+          "regression": -9.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 0.0,
+          "after": 1.0,
+          "regression": 1.0,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 2.0,
+          "after": 1.0,
+          "regression": -1.0,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 6.5,
+          "after": 2.0,
+          "regression": -4.5,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 0.5,
+          "after": 1.5,
+          "regression": 1.0,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 25.0,
+          "after": 3.0,
+          "regression": -22.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 27.0,
+          "after": 24.0,
+          "regression": -3.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 6.0,
+          "after": 2.0,
+          "regression": -4.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 234.0,
+          "after": 5.0,
+          "regression": -229.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 9.0,
+          "after": 93.0,
+          "regression": 84.0,
+          "noise": 106.2
+        }
+      },
+      "failures": []
+    },
+    {
+      "from": "F07",
+      "to": "F08",
+      "anchor_pair": "C_H",
+      "t": [
+        0.85,
+        1.0
+      ],
+      "distances": {
+        "width": {
+          "before": 3.0,
+          "after": 0.0,
+          "regression": -3.0,
+          "noise": 2.1
+        },
+        "height": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 3.0
+        },
+        "area": {
+          "before": 353.0,
+          "after": 0.0,
+          "regression": -353.0,
+          "noise": 496.825
+        },
+        "head.width": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 3.255
+        },
+        "head.height": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 2.59
+        },
+        "head.area": {
+          "before": 27.0,
+          "after": 0.0,
+          "regression": -27.0,
+          "noise": 157.2
+        },
+        "shoulder.outer_span": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 3.535
+        },
+        "chest.outer_span": {
+          "before": 1.0,
+          "after": 0.0,
+          "regression": -1.0,
+          "noise": 3.815
+        },
+        "belly.outer_span": {
+          "before": 2.0,
+          "after": 0.0,
+          "regression": -2.0,
+          "noise": 4.235
+        },
+        "paws.left.width": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 1.225
+        },
+        "paws.right.width": {
+          "before": 1.5,
+          "after": 0.0,
+          "regression": -1.5,
+          "noise": 1.2075
+        },
+        "paws.left.area": {
+          "before": 3.0,
+          "after": 0.0,
+          "regression": -3.0,
+          "noise": 25.32
+        },
+        "paws.right.area": {
+          "before": 24.0,
+          "after": 0.0,
+          "regression": -24.0,
+          "noise": 25.2
+        },
+        "paws.spacing": {
+          "before": 0.0,
+          "after": 0.0,
+          "regression": 0.0,
+          "noise": 1.2425
+        },
+        "tail.outer_span": {
+          "before": 2.0,
+          "after": 0.0,
+          "regression": -2.0,
+          "noise": 4.235
+        },
+        "tail.left.area": {
+          "before": 5.0,
+          "after": 0.0,
+          "regression": -5.0,
+          "noise": 61.56
+        },
+        "tail.right.area": {
+          "before": 93.0,
+          "after": 0.0,
+          "regression": -93.0,
+          "noise": 106.2
+        }
+      },
+      "failures": []
+    }
+  ],
+  "failures": [
+    "F03->F04:tail.right.area_persistently_moves_away=110.000; steps=2; noise=106.200; endpoint=2655.000"
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "schema": "desktop-pet.interaction-sequence-head-locked.v1",
+  "canonical_cell": "Art/Approved/baomihua-canonical-front-crouch-cell.png",
+  "canonical_head_outer_span": 87.0,
+  "canonical_face_span": 87.0,
+  "baseline": 204,
+  "cross_frame_blending": false,
+  "local_warp_or_face_composite": false,
+  "frames": [
+    {
+      "frame": "F00",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/00-F00.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/00-F00.png",
+      "source_bbox": [
+        223,
+        138,
+        965,
+        1143
+      ],
+      "source_head_outer_span": 438.5,
+      "source_face_span": 443.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.19739596,
+      "fit_scale_limit": 0.20298507,
+      "fit_limited": false,
+      "applied_scale": 0.1960199,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        23,
+        7,
+        168,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        23,
+        7
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.72985,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F01",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/01-F01.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/01-F01.png",
+      "source_bbox": [
+        221,
+        137,
+        970,
+        1145
+      ],
+      "source_head_outer_span": 439.0,
+      "source_face_span": 445.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.19684165,
+      "fit_scale_limit": 0.20238095,
+      "fit_limited": false,
+      "applied_scale": 0.19642857,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        22,
+        6,
+        169,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        22,
+        6
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.98524,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F02",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/02-F02.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/02-F02.png",
+      "source_bbox": [
+        221,
+        137,
+        967,
+        1144
+      ],
+      "source_head_outer_span": 439.0,
+      "source_face_span": 444.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.19706181,
+      "fit_scale_limit": 0.20258193,
+      "fit_limited": false,
+      "applied_scale": 0.19662363,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        21,
+        6,
+        168,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        21,
+        6
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.28019,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F03",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/03-F03.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/03-F03.png",
+      "source_bbox": [
+        227,
+        140,
+        961,
+        1145
+      ],
+      "source_head_outer_span": 436.0,
+      "source_face_span": 441.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.1984101,
+      "fit_scale_limit": 0.20298507,
+      "fit_limited": false,
+      "applied_scale": 0.19800995,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        22,
+        5,
+        167,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        22,
+        5
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.25291,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F04",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/04-F04.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/04-F04.png",
+      "source_bbox": [
+        222,
+        124,
+        967,
+        1145
+      ],
+      "source_head_outer_span": 446.0,
+      "source_face_span": 453.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.19356012,
+      "fit_scale_limit": 0.19980411,
+      "fit_limited": false,
+      "applied_scale": 0.19392752,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        24,
+        6,
+        168,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        24,
+        6
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 103.20115,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F05",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/05-F05.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/05-F05.png",
+      "source_bbox": [
+        222,
+        118,
+        969,
+        1144
+      ],
+      "source_head_outer_span": 445.0,
+      "source_face_span": 452.5,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.19388541,
+      "fit_scale_limit": 0.19883041,
+      "fit_limited": false,
+      "applied_scale": 0.19298246,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        24,
+        6,
+        168,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        24,
+        6
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 103.02472,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F06",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/06-F06.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/06-F06.png",
+      "source_bbox": [
+        226,
+        110,
+        963,
+        1143
+      ],
+      "source_head_outer_span": 443.0,
+      "source_face_span": 450.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.1948608,
+      "fit_scale_limit": 0.19748306,
+      "fit_limited": false,
+      "applied_scale": 0.1945789,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        24,
+        3,
+        167,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        24,
+        3
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.78759,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F07",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/07-F07.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/07-F07.png",
+      "source_bbox": [
+        226,
+        138,
+        942,
+        1145
+      ],
+      "source_head_outer_span": 432.0,
+      "source_face_span": 436.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.20046509,
+      "fit_scale_limit": 0.20258193,
+      "fit_limited": false,
+      "applied_scale": 0.19960278,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        21,
+        3,
+        164,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        21,
+        3
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.50602,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F08",
+      "input": "Art/Approved/interaction-v6/rise-v1/sources/08-F08.png",
+      "output": "Art/Approved/interaction-v6/rise-v1/frames/08-F08.png",
+      "source_bbox": [
+        226,
+        137,
+        939,
+        1155
+      ],
+      "source_head_outer_span": 438.0,
+      "source_face_span": 445.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.19706788,
+      "fit_scale_limit": 0.20039293,
+      "fit_limited": false,
+      "applied_scale": 0.19646365,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        23,
+        4,
+        163,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        23,
+        4
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.75154,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "desktop-pet.interaction-v6-rise.v1",
+  "identity_anchor": "Art/Candidates/baomihua-canonical-front-crouch-v5.png",
+  "canonical_cell": "Art/Approved/baomihua-canonical-front-crouch-cell.png",
+  "cell_size": [192, 208],
+  "baseline": 204,
+  "frame_count": 9,
+  "cross_frame_blending": false,
+  "local_warp": false,
+  "face_or_body_compositing": false,
+  "registration": "whole-cat uniform scale and translation with locked head span",
+  "frames": [
+    {"frame": "F00", "t": 0.00, "source": "Art/Approved/interaction-v6/rise-v1/sources/00-F00.png"},
+    {"frame": "F01", "t": 0.10, "source": "Art/Approved/interaction-v6/rise-v1/sources/01-F01.png"},
+    {"frame": "F02", "t": 0.20, "source": "Art/Approved/interaction-v6/rise-v1/sources/02-F02.png"},
+    {"frame": "F03", "t": 0.30, "source": "Art/Approved/interaction-v6/rise-v1/sources/03-F03.png"},
+    {"frame": "F04", "t": 0.42, "source": "Art/Approved/interaction-v6/rise-v1/sources/04-F04.png"},
+    {"frame": "F05", "t": 0.56, "source": "Art/Approved/interaction-v6/rise-v1/sources/05-F05.png"},
+    {"frame": "F06", "t": 0.70, "source": "Art/Approved/interaction-v6/rise-v1/sources/06-F06.png"},
+    {"frame": "F07", "t": 0.85, "source": "Art/Approved/interaction-v6/rise-v1/sources/07-F07.png"},
+    {"frame": "F08", "t": 1.00, "source": "Art/Approved/interaction-v6/rise-v1/sources/08-F08.png"}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "independent_visual_qa",
+  "artifact": "Art/Approved/interaction-v6/rise-v1/atlas.png",
+  "failed_checks": [
+    "F03->F04:tail.right.area_persistently_moves_away=110.000; steps=2; noise=106.200; endpoint=2655.000"
+  ],
+  "evidence": "At native 192x208 pet size, the tail outline, root, thickness, and ground contact remain visually continuous; no tail jump is visible.",
+  "override_scope": "metric warning only; no deterministic structural or visible anatomy failure is overridden"
+}
