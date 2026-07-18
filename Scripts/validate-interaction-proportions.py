@@ -45,6 +45,11 @@ VISIBLE_ALPHA = 8
 BASELINE = 204
 MODES = {"seated", "transition", "compact-standing"}
 ANCHOR_PAIRS = {"C_H", "H_S"}
+SYMMETRY_LIMITS = {
+    "paws": 1.15,
+    "legs": 1.20,
+    "forelimb_proxy": 1.15,
+}
 
 # All body regions are deliberately expressed in a frame's own registered
 # silhouette height.  This lets a small natural head tilt through while still
@@ -737,6 +742,14 @@ def ratio(numerator: float | None, denominator: float | None) -> float | None:
     return round(float(numerator) / float(denominator), 6)
 
 
+def symmetry_ratio(left: float | None, right: float | None) -> float | None:
+    """Return an order-independent left/right size ratio."""
+
+    if left is None or right is None or min(left, right) <= 0:
+        return None
+    return round(max(float(left), float(right)) / min(float(left), float(right)), 6)
+
+
 def metrics(cell: Image.Image) -> dict[str, Any]:
     mask = alpha_mask(cell)
     box = alpha_box(mask)
@@ -809,6 +822,32 @@ def metrics(cell: Image.Image) -> dict[str, Any]:
         "left_paw_to_head": ratio(paws["left"]["width"], result["head"]["outer_span"]),
         "right_paw_to_head": ratio(paws["right"]["width"], result["head"]["outer_span"]),
         "paw_spacing_to_head": ratio(paws["spacing"], result["head"]["outer_span"]),
+    }
+    result["symmetry"] = {
+        "paws": {
+            "ratio": symmetry_ratio(paws["left"]["width"], paws["right"]["width"]),
+            "left_width": paws["left"]["width"],
+            "right_width": paws["right"]["width"],
+            "reliable": bool(paws["reliable"]),
+            "limit": SYMMETRY_LIMITS["paws"],
+        },
+        "legs": {
+            "ratio": symmetry_ratio(legs["left"]["width"], legs["right"]["width"]),
+            "left_width": legs["left"]["width"],
+            "right_width": legs["right"]["width"],
+            "reliable": bool(legs["reliable"]),
+            "limit": SYMMETRY_LIMITS["legs"],
+        },
+        "forelimb_proxy": {
+            "ratio": symmetry_ratio(forelimb_proxy["left"]["width"], forelimb_proxy["right"]["width"]),
+            "left_width": forelimb_proxy["left"]["width"],
+            "right_width": forelimb_proxy["right"]["width"],
+            "reliable": (
+                forelimb_proxy["left"]["width"] is not None
+                and forelimb_proxy["right"]["width"] is not None
+            ),
+            "limit": SYMMETRY_LIMITS["forelimb_proxy"],
+        },
     }
     # Compatibility aliases from the original v1 report.
     result["face_width"] = result["face"]["central_span"]
@@ -973,10 +1012,34 @@ def compare_to_target(
     return failures
 
 
+def symmetry_failures(name: str, value: dict[str, Any]) -> list[str]:
+    """Reject visibly unequal supports in front-facing interaction poses.
+
+    Run-based paw and leg measurements are checked only when their paired
+    tracker is reliable, so a genuinely occluded or merged support does not
+    become a false hard failure.  The fixed forelimb proxy is checked whenever
+    both anatomical columns contain measurable pixels.
+    """
+
+    failures: list[str] = []
+    for group, limit in SYMMETRY_LIMITS.items():
+        measurement = value["symmetry"][group]
+        observed = measurement["ratio"]
+        if not measurement["reliable"] or observed is None:
+            continue
+        if observed > limit:
+            failures.append(
+                f"{name}:symmetry_{group}_ratio={observed:.3f}; limit={limit:.3f}; "
+                f"left={measurement['left_width']:.3f}; right={measurement['right_width']:.3f}"
+            )
+    return failures
+
+
 def generic_identity_failures(name: str, value: dict[str, Any], canonical: dict[str, Any]) -> list[str]:
     """Strict invariant checks that also protect old, phase-less mode maps."""
 
     failures: list[str] = []
+    failures.extend(symmetry_failures(name, value))
     if value["component_count"] != 1:
         failures.append(f"{name}:components={value['component_count']}")
     if value["edge_touch"]:
@@ -1293,10 +1356,15 @@ def main() -> None:
     canonical_metrics = metrics(read_cell(args.canonical, label="canonical"))
     half_metrics = metrics(read_cell(args.half_rise_master, label="half_rise_master")) if args.half_rise_master else None
     standing_metrics = metrics(read_cell(args.standing_master, label="standing_master")) if args.standing_master else None
+    endpoint_failures = {
+        "canonical": symmetry_failures("canonical", canonical_metrics),
+        "half_rise_master": [] if half_metrics is None else symmetry_failures("half_rise_master", half_metrics),
+        "standing_master": [] if standing_metrics is None else symmetry_failures("standing_master", standing_metrics),
+    }
     names = [f"F{index:02d}" for index in range(args.rows * args.columns)]
     mode_map = parse_mode_map(args.mode_map, names)
     frame_records: list[dict[str, Any]] = []
-    failures: list[str] = []
+    failures: list[str] = [failure for group in endpoint_failures.values() for failure in group]
     for index, name in enumerate(names):
         row, column = divmod(index, args.columns)
         cell = atlas.crop((column * CELL_W, row * CELL_H, (column + 1) * CELL_W, (row + 1) * CELL_H))
@@ -1326,6 +1394,7 @@ def main() -> None:
         "canonical_metrics": canonical_metrics,
         "half_rise_metrics": half_metrics,
         "standing_metrics": standing_metrics,
+        "endpoint_failures": endpoint_failures,
         "frames": frame_records,
         "temporal": temporal,
         "three_frame_trends": trends,
