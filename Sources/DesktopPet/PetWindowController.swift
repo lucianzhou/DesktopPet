@@ -20,6 +20,7 @@ final class PetWindowController: NSWindowController {
     private var targetGazeDirection: Int?
     private var filteredGazeAngle: Double?
     private var lastGazeStepAt: TimeInterval = 0
+    private var neutralGazeReachedAt: TimeInterval?
     private var gazeIsActive = false
     private var sleepObserver: NSObjectProtocol?
 
@@ -208,16 +209,39 @@ final class PetWindowController: NSWindowController {
         let dx = pointer.x - center.x
         let dy = pointer.y - center.y
 
-        // The center of the cat is the neutral front-facing pose. Return to
-        // that canonical frame when the pointer is directly in front rather
-        // than leaving the last diagonal direction frozen on screen.
+        let directionCount = gazeLayout.frameCount
+        let now = ProcessInfo.processInfo.systemUptime
+
+        // Returning straight to the neutral cell from an arbitrary diagonal
+        // creates the most conspicuous seated-pose snap. Walk through adjacent
+        // registered gaze cells first, then reveal neutral only after reaching
+        // one of the near-front bridge directions for a short dwell.
         guard hypot(dx, dy) > 18 else {
-            if gazeIsActive {
+            guard gazeIsActive, let lastGazeDirection else { return }
+            let bridgeCandidates = [0, 1, directionCount - 2, directionCount - 1]
+            let bridge = bridgeCandidates.min {
+                circularDistance(from: lastGazeDirection, to: $0, count: directionCount)
+                    < circularDistance(from: lastGazeDirection, to: $1, count: directionCount)
+            } ?? 0
+            if lastGazeDirection != bridge {
+                guard now - lastGazeStepAt >= 1.0 / 30.0 else { return }
+                let next = PetInteractionModel.nextGazeDirection(
+                    from: lastGazeDirection,
+                    toward: bridge,
+                    directionCount: directionCount
+                )
+                showGazeDirection(next, now: now)
+                neutralGazeReachedAt = nil
+            } else if let neutralGazeReachedAt {
+                guard now - neutralGazeReachedAt >= 0.08 else { return }
                 resetGazeTracking()
                 animator.show(atlas: .neutral, row: 0, frame: 0)
+            } else {
+                neutralGazeReachedAt = now
             }
             return
         }
+        neutralGazeReachedAt = nil
 
         var rawAngle = atan2(dx, dy) * 180 / .pi
         if rawAngle < 0 { rawAngle += 360 }
@@ -232,13 +256,22 @@ final class PetWindowController: NSWindowController {
         }
 
         guard let filteredGazeAngle else { return }
-        let directionCount = gazeLayout.frameCount
         let directionStep = 360 / Double(directionCount)
-        targetGazeDirection = Int((filteredGazeAngle / directionStep).rounded()) % directionCount
+        let candidate = Int((filteredGazeAngle / directionStep).rounded()) % directionCount
+        if let targetGazeDirection, candidate != targetGazeDirection {
+            let targetCenter = Double(targetGazeDirection) * directionStep
+            var delta = filteredGazeAngle - targetCenter
+            if delta > 180 { delta -= 360 }
+            if delta < -180 { delta += 360 }
+            if abs(delta) >= directionStep * 0.62 {
+                self.targetGazeDirection = candidate
+            }
+        } else {
+            targetGazeDirection = candidate
+        }
         guard let targetGazeDirection else { return }
 
-        let now = ProcessInfo.processInfo.systemUptime
-        guard now - lastGazeStepAt >= 0.05 else { return }
+        guard now - lastGazeStepAt >= 1.0 / 30.0 else { return }
         let direction = lastGazeDirection.map {
             PetInteractionModel.nextGazeDirection(
                 from: $0,
@@ -247,6 +280,10 @@ final class PetWindowController: NSWindowController {
             )
         } ?? targetGazeDirection
         guard !gazeIsActive || direction != lastGazeDirection else { return }
+        showGazeDirection(direction, now: now)
+    }
+
+    private func showGazeDirection(_ direction: Int, now: TimeInterval) {
         gazeIsActive = true
         lastGazeDirection = direction
         lastGazeStepAt = now
@@ -257,12 +294,19 @@ final class PetWindowController: NSWindowController {
         )
     }
 
+    private func circularDistance(from: Int, to: Int, count: Int) -> Int {
+        let forward = (to - from + count) % count
+        let backward = (from - to + count) % count
+        return min(forward, backward)
+    }
+
     private func resetGazeTracking() {
         gazeIsActive = false
         lastGazeDirection = nil
         targetGazeDirection = nil
         filteredGazeAngle = nil
         lastGazeStepAt = 0
+        neutralGazeReachedAt = nil
     }
 
     private func restoreOrPlaceWindow() {
