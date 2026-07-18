@@ -1,0 +1,13 @@
+{
+  "schema": "desktop-pet.interaction-v6-bridge.v1",
+  "segment": "HS1-v2_to_HS4-r2",
+  "identity_anchor": "Art/Candidates/baomihua-canonical-front-crouch-v5.png",
+  "source": "Art/Approved/interaction-v6/hs1-hs4-bridge-v1/source.png",
+  "alpha": "Art/Approved/interaction-v6/hs1-hs4-bridge-v1/alpha.png",
+  "registered_frame": "Art/Approved/interaction-v6/hs1-hs4-bridge-v1/frame.png",
+  "registration": "whole-cat uniform scale and translation with locked head span",
+  "baseline": 204,
+  "cross_frame_blending": false,
+  "local_warp": false,
+  "face_or_body_compositing": false
+}

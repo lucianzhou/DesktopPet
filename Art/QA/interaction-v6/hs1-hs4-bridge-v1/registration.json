@@ -1,0 +1,119 @@
+{
+  "schema": "desktop-pet.interaction-sequence-head-locked.v1",
+  "canonical_cell": "Art/Approved/baomihua-canonical-front-crouch-cell.png",
+  "canonical_head_outer_span": 87.0,
+  "canonical_face_span": 87.0,
+  "baseline": 204,
+  "cross_frame_blending": false,
+  "local_warp_or_face_composite": false,
+  "frames": [
+    {
+      "frame": "F00",
+      "input": "Art/Candidates/baomihua-interaction-v6-hs1-v2-alpha.png",
+      "output": "Art/QA/interaction-v6/hs1-hs4-bridge-v1/frames/00-F00.png",
+      "source_bbox": [
+        227,
+        120,
+        938,
+        1145
+      ],
+      "source_head_outer_span": 441.0,
+      "source_face_span": 447.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.19595489,
+      "fit_scale_limit": 0.19902439,
+      "fit_limited": false,
+      "applied_scale": 0.19414634,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 88.0,
+      "output_bbox": [
+        24,
+        5,
+        162,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        24,
+        5
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.316,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F01",
+      "input": "Art/Approved/interaction-v6/hs1-hs4-bridge-v1/alpha.png",
+      "output": "Art/QA/interaction-v6/hs1-hs4-bridge-v1/frames/01-F01.png",
+      "source_bbox": [
+        253,
+        155,
+        913,
+        1135
+      ],
+      "source_head_outer_span": 427.5,
+      "source_face_span": 435.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.20175439,
+      "fit_scale_limit": 0.20816327,
+      "fit_limited": false,
+      "applied_scale": 0.20204082,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 89.0,
+      "output_bbox": [
+        28,
+        6,
+        161,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        28,
+        6
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 103.12903,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    },
+    {
+      "frame": "F02",
+      "input": "Art/Candidates/baomihua-interaction-v6-hs4-r2-alpha.png",
+      "output": "Art/QA/interaction-v6/hs1-hs4-bridge-v1/frames/02-F02.png",
+      "source_bbox": [
+        253,
+        154,
+        907,
+        1135
+      ],
+      "source_head_outer_span": 428.0,
+      "source_face_span": 434.0,
+      "target_head_outer_span": 87.0,
+      "target_face_span": 87.0,
+      "requested_scale": 0.20186593,
+      "fit_scale_limit": 0.20795107,
+      "fit_limited": false,
+      "applied_scale": 0.20183486,
+      "output_head_outer_span": 87.0,
+      "output_face_span": 89.0,
+      "output_bbox": [
+        27,
+        6,
+        159,
+        204
+      ],
+      "baseline": 204,
+      "translation": [
+        27,
+        6
+      ],
+      "stable_axis_target": 102.74305,
+      "stable_axis_output": 102.38677,
+      "clipped": false,
+      "whole_cat_uniform_scale_only": true
+    }
+  ]
+}

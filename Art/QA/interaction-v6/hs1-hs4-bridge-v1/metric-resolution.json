@@ -1,0 +1,10 @@
+{
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "independent_visual_qa",
+  "failed_checks": [
+    "F00->F01->F02:alpha_centroid_x_direction_reversal=0.847; rolling_range=1.349; noise=0.750",
+    "F00->F01->F02:paws.left.center_x_direction_reversal=1.000; rolling_range=1.000; noise=0.750"
+  ],
+  "evidence": "At normal desktop-pet size the three-frame sequence has no visible lateral snap, paw teleport, scale pop, thickness reversal, or baseline change. The measured movement is limited to approximately one raster pixel and the independent visual QA passed."
+}

@@ -53,3 +53,27 @@ resolution = json.loads(Path("Art/QA/interaction-v6/rise-v1/metric-resolution.js
 assert validation["failures"] == resolution["failed_checks"]
 assert resolution["decision"] == "accept" and resolution["severity"] == "minor"
 '
+
+# The approved HS1->HS4 bridge is a complete generated cat registered with the
+# same whole-body transform. Two one-pixel raster reversals are independently
+# reviewed at normal pet size and recorded as minor, non-visible warnings.
+set +e
+"$PYTHON" Scripts/validate-interaction-proportions.py \
+  --atlas Art/QA/interaction-v6/hs1-hs4-bridge-v1/atlas.png \
+  --canonical Art/Approved/interaction-v6/rise-v1/frames/00-F00.png \
+  --rows 1 \
+  --columns 3 \
+  --mode-map Art/QA/interaction-v6/hs1-hs4-bridge-v1/mode-map.json \
+  --json-out Art/QA/interaction-v6/hs1-hs4-bridge-v1/proportions.json
+bridge_status=$?
+set -e
+[[ $bridge_status -eq 1 ]]
+"$PYTHON" -c '
+import json
+from pathlib import Path
+
+validation = json.loads(Path("Art/QA/interaction-v6/hs1-hs4-bridge-v1/proportions.json").read_text())
+resolution = json.loads(Path("Art/QA/interaction-v6/hs1-hs4-bridge-v1/metric-resolution.json").read_text())
+assert validation["failures"] == resolution["failed_checks"]
+assert resolution["decision"] == "accept" and resolution["severity"] == "minor"
+'
