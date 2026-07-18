@@ -1,5 +1,6 @@
 import AppKit
 import CoreVideo
+import DesktopPetCore
 
 /// Bridges Core Video's display-link thread to the main-actor animator.
 ///
@@ -182,6 +183,17 @@ final class SpriteAnimator {
         view?.resetPresentation()
     }
 
+    func settlePresentation(duration: TimeInterval, completion: @escaping () -> Void) {
+        stopDisplayLink()
+        sequence = nil
+        self.completion = nil
+        guard let view else {
+            completion()
+            return
+        }
+        view.resetPresentation(animatedOver: duration, completion: completion)
+    }
+
     private func startDisplayLink() {
         if displayLink == nil {
             var createdLink: CVDisplayLink?
@@ -269,10 +281,10 @@ final class SpriteAnimator {
         case .none:
             break
         case .breathing(let cycle):
-            let phase = (1 - cos(2 * Double.pi * elapsed / cycle)) / 2
+            let phase = PetInteractionModel.breathingAmplitude(elapsed: elapsed, cycle: cycle)
             view?.setPresentation(
-                scaleX: 1 + 0.004 * phase,
-                scaleY: 1 + 0.012 * phase
+                scaleX: 1 + 0.006 * phase,
+                scaleY: 1 + 0.022 * phase
             )
         }
     }

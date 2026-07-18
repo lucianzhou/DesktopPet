@@ -29,5 +29,30 @@ check(PetInteractionModel.gazeDirection(pointer: CGPoint(x: 0, y: 100), petCente
 check(PetInteractionModel.gazeDirection(pointer: CGPoint(x: 103, y: 103), petCenter: center) == nil, "deadzone")
 check(PetInteractionModel.nextGazeDirection(from: 15, toward: 1) == 0, "clockwise wrap step")
 check(PetInteractionModel.nextGazeDirection(from: 1, toward: 15) == 0, "counterclockwise wrap step")
+check(
+    PetInteractionModel.gazeDirection(
+        pointer: CGPoint(x: 200, y: 100),
+        petCenter: center,
+        directionCount: 32
+    ) == 8,
+    "32-direction right gaze"
+)
+check(
+    PetInteractionModel.nextGazeDirection(from: 31, toward: 1, directionCount: 32) == 0,
+    "32-direction clockwise wrap step"
+)
+check(PetInteractionModel.breathingAmplitude(elapsed: 0, cycle: 4.4) == 0, "breathing starts at rest")
+check(
+    abs(PetInteractionModel.breathingAmplitude(elapsed: 4.4 * 0.42, cycle: 4.4) - 1) < 0.000_001,
+    "breathing reaches inhale peak"
+)
+check(
+    abs(PetInteractionModel.breathingAmplitude(elapsed: 4.4 * 0.46, cycle: 4.4) - 1) < 0.000_001,
+    "breathing holds briefly"
+)
+check(
+    abs(PetInteractionModel.breathingAmplitude(elapsed: 4.4, cycle: 4.4)) < 0.000_001,
+    "breathing loop closes at rest"
+)
 
 print("DesktopPetCoreChecks: all checks passed")

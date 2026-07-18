@@ -124,6 +124,27 @@ final class PetView: NSView {
         applyPresentationTransform()
     }
 
+    func resetPresentation(animatedOver duration: TimeInterval, completion: @escaping () -> Void) {
+        guard presentationScaleX != 1 || presentationScaleY != 1,
+              duration > 0,
+              let layer,
+              configureBottomAnchoredPresentationLayer(layer) else {
+            resetPresentation()
+            completion()
+            return
+        }
+
+        presentationScaleX = 1
+        presentationScaleY = 1
+        CATransaction.begin()
+        CATransaction.setDisableActions(false)
+        CATransaction.setAnimationDuration(duration)
+        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
+        CATransaction.setCompletionBlock(completion)
+        layer.transform = CATransform3DIdentity
+        CATransaction.commit()
+    }
+
     /// The breathing loop updates at display-link cadence.  Scaling the
     /// already-rendered backing layer keeps those updates on Core Animation's
     /// compositing path instead of asking AppKit to redraw and re-decode the
@@ -139,7 +160,14 @@ final class PetView: NSView {
         // expressed in real panel points.
         guard !layer.bounds.isEmpty else { return false }
 
-        let bottomAnchor = CGPoint(x: 0.5, y: layer.isGeometryFlipped ? 1 : 0)
+        // Sprite cells keep four transparent pixels beneath the registered
+        // y=204 contact line. Anchor the transform to that real contact line,
+        // not to the 208px cell boundary, so breathing never lifts the cat.
+        let baselineRatio = CGFloat(204) / Self.cellSize.height
+        let bottomAnchor = CGPoint(
+            x: 0.5,
+            y: layer.isGeometryFlipped ? baselineRatio : 1 - baselineRatio
+        )
         guard layer.anchorPoint != bottomAnchor else { return true }
 
         // Changing a CALayer's anchor point otherwise changes its frame.  At

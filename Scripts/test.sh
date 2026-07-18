@@ -6,6 +6,10 @@ cd "$ROOT"
 swift run DesktopPetCoreChecks
 
 PYTHON="${PYTHON:-/Users/popwind/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3}"
+"$PYTHON" Scripts/validate-wake.py Assets/baomihua-sleep-v2.png \
+  --columns 1 \
+  --rows 1 \
+  --json-out Art/QA/sleep-v2-validation.json
 "$PYTHON" Scripts/validate-wake.py Assets/baomihua-wake.png \
   --json-out Art/QA/wake-row-v2-validation.json
 "$PYTHON" Scripts/validate-gaze-atlas.py Assets/baomihua-gaze-v8-uniform.png \

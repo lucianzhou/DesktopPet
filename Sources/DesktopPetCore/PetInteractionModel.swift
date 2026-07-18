@@ -79,25 +79,50 @@ public struct PetInteractionModel: Sendable {
         return PetTransition(posture: posture, actions: [.cancelAllTimers])
     }
 
-    public static func gazeDirection(pointer: CGPoint, petCenter: CGPoint, deadzone: CGFloat = 8) -> Int? {
+    public static func gazeDirection(
+        pointer: CGPoint,
+        petCenter: CGPoint,
+        deadzone: CGFloat = 8,
+        directionCount: Int = 16
+    ) -> Int? {
+        precondition(directionCount > 1)
         let dx = pointer.x - petCenter.x
         let dy = pointer.y - petCenter.y
         guard hypot(dx, dy) > deadzone else { return nil }
 
         var degrees = atan2(dx, dy) * 180 / .pi
         if degrees < 0 { degrees += 360 }
-        return Int((degrees / 22.5).rounded()) % 16
+        let step = 360 / Double(directionCount)
+        return Int((degrees / step).rounded()) % directionCount
     }
 
-    public static func nextGazeDirection(from current: Int, toward target: Int) -> Int {
-        let normalizedCurrent = ((current % 16) + 16) % 16
-        let normalizedTarget = ((target % 16) + 16) % 16
+    public static func nextGazeDirection(from current: Int, toward target: Int, directionCount: Int = 16) -> Int {
+        precondition(directionCount > 1)
+        let normalizedCurrent = ((current % directionCount) + directionCount) % directionCount
+        let normalizedTarget = ((target % directionCount) + directionCount) % directionCount
         guard normalizedCurrent != normalizedTarget else { return normalizedCurrent }
 
-        let clockwise = (normalizedTarget - normalizedCurrent + 16) % 16
-        let counterclockwise = (normalizedCurrent - normalizedTarget + 16) % 16
+        let clockwise = (normalizedTarget - normalizedCurrent + directionCount) % directionCount
+        let counterclockwise = (normalizedCurrent - normalizedTarget + directionCount) % directionCount
         return clockwise <= counterclockwise
-            ? (normalizedCurrent + 1) % 16
-            : (normalizedCurrent + 15) % 16
+            ? (normalizedCurrent + 1) % directionCount
+            : (normalizedCurrent + directionCount - 1) % directionCount
+    }
+
+    public static func breathingAmplitude(elapsed: TimeInterval, cycle: TimeInterval) -> Double {
+        precondition(cycle.isFinite && cycle > 0)
+        let progress = (elapsed / cycle).truncatingRemainder(dividingBy: 1)
+        if progress < 0.42 {
+            return smootherStep(progress / 0.42)
+        }
+        if progress < 0.48 {
+            return 1
+        }
+        return 1 - smootherStep((progress - 0.48) / 0.52)
+    }
+
+    private static func smootherStep(_ value: Double) -> Double {
+        let x = min(max(value, 0), 1)
+        return x * x * x * (x * (x * 6 - 15) + 10)
     }
 }

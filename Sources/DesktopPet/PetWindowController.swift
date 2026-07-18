@@ -12,6 +12,7 @@ final class PetWindowController: NSWindowController {
     private var model = PetInteractionModel()
     private let petView: PetView
     private let interactionLayout: AssetLocator.InteractionAtlasLayout
+    private let gazeLayout: AssetLocator.GazeAtlasLayout
     private lazy var animator = SpriteAnimator(view: petView)
     private var sleepTimer: Timer?
     private var gazeTimer: Timer?
@@ -25,6 +26,7 @@ final class PetWindowController: NSWindowController {
     init(assetDirectory: URL?) throws {
         let assets = try AssetLocator.loadImages(assetDirectory: assetDirectory)
         interactionLayout = assets.interactionLayout
+        gazeLayout = assets.gazeLayout
         petView = PetView(
             interactionImage: assets.interaction,
             sleepImage: assets.sleep,
@@ -113,23 +115,27 @@ final class PetWindowController: NSWindowController {
             atlas: .sleep,
             row: 0,
             frameCount: 1,
-            duration: 4,
-            motion: .breathing(cycle: 4)
+            duration: 4.4,
+            motion: .breathing(cycle: 4.4)
         ))
     }
 
     private func showStretching() {
         resetGazeTracking()
-        animator.play(SpriteSequence(
+        let sequence = SpriteSequence(
             atlas: .wake,
             row: 0,
             durations: [0.25, 0.22, 0.24, 0.26, 0.34, 0.24, 0.22, 0.23],
             loops: false
-        )) { [weak self] in
+        )
+        animator.settlePresentation(duration: 0.15) { [weak self] in
             guard let self else { return }
-            let transition = self.model.stretchCompleted()
-            self.showSitting()
-            self.apply(transition)
+            self.animator.play(sequence) { [weak self] in
+                guard let self else { return }
+                let transition = self.model.stretchCompleted()
+                self.showSitting()
+                self.apply(transition)
+            }
         }
     }
 
@@ -226,19 +232,29 @@ final class PetWindowController: NSWindowController {
         }
 
         guard let filteredGazeAngle else { return }
-        targetGazeDirection = Int((filteredGazeAngle / 22.5).rounded()) % 16
+        let directionCount = gazeLayout.frameCount
+        let directionStep = 360 / Double(directionCount)
+        targetGazeDirection = Int((filteredGazeAngle / directionStep).rounded()) % directionCount
         guard let targetGazeDirection else { return }
 
         let now = ProcessInfo.processInfo.systemUptime
         guard now - lastGazeStepAt >= 0.05 else { return }
         let direction = lastGazeDirection.map {
-            PetInteractionModel.nextGazeDirection(from: $0, toward: targetGazeDirection)
+            PetInteractionModel.nextGazeDirection(
+                from: $0,
+                toward: targetGazeDirection,
+                directionCount: directionCount
+            )
         } ?? targetGazeDirection
         guard !gazeIsActive || direction != lastGazeDirection else { return }
         gazeIsActive = true
         lastGazeDirection = direction
         lastGazeStepAt = now
-        animator.show(atlas: .gaze, row: direction < 8 ? 0 : 1, frame: direction % 8)
+        animator.show(
+            atlas: .gaze,
+            row: direction / gazeLayout.columns,
+            frame: direction % gazeLayout.columns
+        )
     }
 
     private func resetGazeTracking() {
@@ -288,6 +304,13 @@ private enum AssetLocator {
         var frameCount: Int { columns * rows }
     }
 
+    struct GazeAtlasLayout: Equatable {
+        let columns: Int
+        let rows: Int
+
+        var frameCount: Int { columns * rows }
+    }
+
     struct Images {
         let interaction: NSImage
         let interactionLayout: InteractionAtlasLayout
@@ -295,13 +318,14 @@ private enum AssetLocator {
         let wake: NSImage
         let neutral: NSImage
         let gaze: NSImage
+        let gazeLayout: GazeAtlasLayout
     }
 
     static func loadImages(assetDirectory: URL?) throws -> Images {
         let roots = candidateRoots(assetDirectory: assetDirectory)
         guard let assetsRoot = roots.first(where: {
             FileManager.default.fileExists(atPath: $0.appendingPathComponent(interactionFilename).path)
-                && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-sleep.png").path)
+                && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-sleep-v2.png").path)
                 && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-wake.png").path)
                 && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-neutral.png").path)
                 && FileManager.default.fileExists(atPath: $0.appendingPathComponent("baomihua-gaze-v8-uniform.png").path)
@@ -309,7 +333,7 @@ private enum AssetLocator {
             throw AssetError.missingAssets(roots.map(\.path))
         }
         guard let interaction = NSImage(contentsOf: assetsRoot.appendingPathComponent(interactionFilename)),
-              let sleep = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-sleep.png")),
+              let sleep = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-sleep-v2.png")),
               let wake = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-wake.png")),
               let neutral = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-neutral.png")),
               let gaze = NSImage(contentsOf: assetsRoot.appendingPathComponent("baomihua-gaze-v8-uniform.png")) else {
@@ -320,13 +344,19 @@ private enum AssetLocator {
             let actual = interactionSize.map { "\($0.width) × \($0.height)" } ?? "unavailable"
             throw AssetError.invalidInteractionAtlasDimensions(assetsRoot.path, actual)
         }
+        let gazeSize = pixelSize(of: gaze)
+        guard let gazeLayout = gazeLayout(for: gazeSize) else {
+            let actual = gazeSize.map { "\($0.width) × \($0.height)" } ?? "unavailable"
+            throw AssetError.invalidGazeAtlasDimensions(assetsRoot.path, actual)
+        }
         return Images(
             interaction: interaction,
             interactionLayout: interactionLayout,
             sleep: sleep,
             wake: wake,
             neutral: neutral,
-            gaze: gaze
+            gaze: gaze,
+            gazeLayout: gazeLayout
         )
     }
 
@@ -339,6 +369,17 @@ private enum AssetLocator {
             return nil
         }
         return InteractionAtlasLayout(columns: interactionColumns, rows: interactionRows)
+    }
+
+    private static func gazeLayout(for size: (width: Int, height: Int)?) -> GazeAtlasLayout? {
+        guard let size,
+              size.width == interactionCellWidth * interactionColumns,
+              size.height.isMultiple(of: interactionCellHeight) else {
+            return nil
+        }
+        let rows = size.height / interactionCellHeight
+        guard rows > 0 else { return nil }
+        return GazeAtlasLayout(columns: interactionColumns, rows: rows)
     }
 
     private static func pixelSize(of image: NSImage) -> (width: Int, height: Int)? {
@@ -371,6 +412,7 @@ private enum AssetLocator {
         case missingAssets([String])
         case unreadableAssets(String)
         case invalidInteractionAtlasDimensions(String, String)
+        case invalidGazeAtlasDimensions(String, String)
 
         var errorDescription: String? {
             switch self {
@@ -380,6 +422,8 @@ private enum AssetLocator {
                 return "Unable to read pet assets in \(root)"
             case .invalidInteractionAtlasDimensions(let root, let actual):
                 return "Invalid baomihua-interaction-v5.png dimensions in \(root). Expected 1536 × 1248 pixels (8 × 6 / 48 frames of 192 × 208); found \(actual)."
+            case .invalidGazeAtlasDimensions(let root, let actual):
+                return "Invalid baomihua gaze atlas dimensions in \(root). Expected 8 columns of 192 × 208 cells; found \(actual)."
             }
         }
     }
